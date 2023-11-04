@@ -1,0 +1,22 @@
+.ftr-lnk {
+  ul {
+    gap: 12px;
+    h3 {
+      letter-spacing: 0.1em;
+      font-size: calc(0.7vw + 10px);
+      font-weight: bold;
+    }
+    li {
+      font-size: calc(0.5vw + 8px);
+      font-weight: light;
+    }
+  }
+}
+.ftr-sub{
+  p{
+    font-size: calc(0.5vw + 8px);
+  }
+  button{
+    font-size: calc(0.5vw + 10px);
+  }
+}

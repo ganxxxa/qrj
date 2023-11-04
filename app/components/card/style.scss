@@ -1,0 +1,83 @@
+.blog-card {
+  @media screen and (min-width: 961px) and (max-width: 1279px) {
+    min-width: 300px;
+  }
+
+  height: 280px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  //   flex: 1 1 30%; /*grow | shrink | basis */
+
+  &:hover {
+    .card-content {
+      height: 30%;
+
+      p {
+        opacity: 1;
+      }
+      a {
+        opacity: 1;
+      }
+    }
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    height: 15%;
+    width: 90%;
+    margin: 10px;
+
+    border-radius: 8px;
+    overflow: hidden;
+    transition: height 0.7s;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    p {
+      padding: 8px 0;
+
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.2s 0.1s;
+    }
+    a {
+      opacity: 0;
+      transition: opacity 0.2s 0.1s;
+    }
+
+    @media screen and (max-width: 1279px) {
+      h3 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+      }
+    }
+    a {
+      font-size: 16px;
+
+      padding-bottom: 4px;
+      opacity: 0;
+      transition: opacity 0.2s 0.1s;
+    }
+  }
+}
