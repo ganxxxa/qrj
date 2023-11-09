@@ -31,67 +31,66 @@ const Page = () => {
         ease: "power4.Out",
       },
     });
-    if (main && img && text) {
-      gsap.fromTo(
-        img,
-        {
-          scale: 1,
-        },
-        {
-          scale: 30,
-          scrollTrigger: {
-            trigger: img,
-            start: "top top", // Start fading in when the main section is at the center of the viewport
-            end: "+=800vh", // Finish fading in when the main section is at the center of the viewport
-            scrub: 2,
-            pin: true,
-            ease: "circ.In",
-          },
-        }
-      );
-      gsap.to(main, {
-        backgroundColor: "black", // Change the background color to black
-        scrollTrigger: {
-          trigger: img, // Use the image section as the trigger
-          start: "center center-=100", // Start changing the background color when the bottom of the image reaches the top of the viewport
-          end: "center center", // End changing the background color when the main section is at the center of the viewport
-          scrub: 1.5,
-          ease: "power4.Out",
-        },
-      });
-      tl.fromTo(
-        text,
-        {
-          opacity: 0,
-          duration: 0.1,
-        },
-        {
-          opacity: 1,
-          scaleY: 1.1,
-        },
-        "+=0.5"
-      ).to(
-        [text, img],
-        {
-          opacity: 0,
-        },
-        0.8
-      );
-      gsap.from(contactRef.current.children, {
-        scaleY: 0.7,
-        opacity: 0,
-        y: -50,
-        stagger: 0.3,
 
+    gsap.fromTo(
+      img,
+      {
+        scale: 1,
+      },
+      {
+        scale: 30,
         scrollTrigger: {
-          trigger: contactRef.current,
-          start: "top center",
-          end: "top center-=200",
+          trigger: img,
+          start: "top top", // Start fading in when the main section is at the center of the viewport
+          end: "+=600vh", // Finish fading in when the main section is at the center of the viewport
           scrub: 2,
-          ease: "power4.In",
+          pin: true,
+          ease: "circ.In",
         },
-      });
-    }
+      }
+    );
+    gsap.to(main, {
+      backgroundColor: "black", // Change the background color to black
+      scrollTrigger: {
+        trigger: img, // Use the image section as the trigger
+        start: "center center-=100", // Start changing the background color when the bottom of the image reaches the top of the viewport
+        end: "center center", // End changing the background color when the main section is at the center of the viewport
+        scrub: 1.5,
+        ease: "power4.Out",
+      },
+    });
+    tl.fromTo(
+      text,
+      {
+        opacity: 0,
+        duration: 0.1,
+      },
+      {
+        opacity: 1,
+        scaleY: 1.1,
+      },
+      "+=0.5"
+    ).to(
+      [text, img],
+      {
+        opacity: 0,
+      },
+      0.8
+    );
+    gsap.from(contactRef.current.children, {
+      scaleY: 0.7,
+      opacity: 0,
+      y: -50,
+      stagger: 0.3,
+
+      scrollTrigger: {
+        trigger: contactRef.current,
+        start: "top center",
+        end: "top center-=200",
+        scrub: 2,
+        ease: "power4.In",
+      },
+    });
   }, []);
 
   return (

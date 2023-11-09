@@ -12,7 +12,7 @@ const Images = ({ width, title, challenge, text, imageSrc, bg, textColor }) => {
       </h3>
 
       <div className="py-8 mb-8 flex justify-center  items-center h-full w-fit">
-        <img className="w-full sm:w-3/4 md:w-1/2"src={imageSrc} alt="Story" />
+        <img className="w-full sm:w-3/4 md:w-3/5"src={imageSrc} alt="Story" />
       </div>
     </section>
   );
