@@ -26,6 +26,7 @@ const What = () => {
       charsClass: "char",
     });
 
+
     const textChange = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
@@ -65,14 +66,27 @@ const What = () => {
           stagger: 1, // Adjust the stagger value to control the delay between words
           ease: "power4",
           scrollTrigger: {
-            trigger: titleRef.current, // Trigger the animation on the entire text
+            trigger: containerRef.current, // Trigger the animation on the entire text
             start: "top top+=200",
-            end: "bottom bottom-=300",
+            end: "+=100",
             scrub: 1.5,
           },
         }
       );
-
+gsap.fromTo(
+  blurRef.current,{
+    x:700
+  },{
+    x:0,
+    ease:"power1.out",
+    scrollTrigger: {
+      trigger: containerRef.current, // Trigger the animation on the entire text
+      start: "top top+=100",
+      end: "+=100",
+      scrub: 1.5,
+    },
+  }
+)
       textChange
         // .to("body", { duration: 1 })
         .to(textRef.current, { opacity: 1, duration: 0.1 }, 0.05)
@@ -105,21 +119,21 @@ const What = () => {
   return (
     <main
       ref={containerRef}
-      className="h-[300vh] w-screen my-16 py-20 p-6 sm:p-12 md:p-16 xl:my-[4vw]"
+      className="h-[300vh] px-5 w-screen sm:my-16  sm:py-20 sm:px-28 xl:my-[4vw]"
     >
-      <div className="h-screen w-full flex flex-col gap-6 2xl:translate-y-12 relative">
+      <div className="h-screen w-full flex flex-col justify-evenly  gap-[3vh] sm:gap-0 2xl:translate-y-12 relative">
         <span ref={titleRef}>
-          <h3 className="text-[#FFBF00]  2xl:text-[5vw] lg:text-[6vw] sm:text-[7vw] text-[8vw] font-semibold leading-6 tracking-wide">
+          <h3 className="text-[#FFBF00]   2xl:text-[4.5vw] lg:text-[5.6vw] sm:text-[6.7vw] text-[8vw]  font-semibold leading-6 tracking-wide">
             WHAT
           </h3>
-          <h1 className="2xl:text-[7.8vw] lg:text-[8.6vw] sm:text-[9.8vw] text-[10.6vw] font-bold tracking-wide">
+          <h1 className="2xl:text-[7.5vw] lg:text-[8.6vw] pt-1 sm:text-[9.8vw] text-[11vw]  font-bold tracking-wide">
             WE DO
           </h1>
         </span>
-        <div className="flex translate-y-6 justify-between">
+        <div className="flex flex-col-reverse  sm:flex-row h-[70vh] sm:h-full translate-y-6 justify-between">
           <p
             ref={textRef}
-            className="2xl:text-[30px] lg:text-[1.85vw] md:text-[2.6vw] sm:text-[2.9vw] text-[3.3vw] w-2/3 h-3/4 opacity-0 font-semibold tracking-wide pt-4 "
+            className="2xl:text-[30px] lg:text-[1.65vw] md:text-[2.5vw] sm:text-[2.8vw] text-[calc(3.4vw+2px)] sm:w-2/3 h-3/4 opacity-0 font-semibold text-justify tracking-wide pt-4 "
           >
             Elevate your brand with our comprehensive branding and brand
             strategy services at our advertising studio. We meticulously craft
@@ -133,11 +147,11 @@ const What = () => {
           </p>
           <div
             ref={blurRef}
-            className="text-2xl flex flex-col md:gap-28 2xl:gap-40 sm:gap-20 gap-16 text-[5.4vw] lg:text-[4vw] content-between -translate-y-20 2xl:-translate-y-40"
+            className="text-2xl flex sm:flex-col md:gap-28 2xl:gap-40 sm:gap-20 gap-[5vh] text-[5.4vw] lg:text-[4vw] content-between translate-y-1/4 sm:-translate-y-20 2xl:-translate-y-40"
           >
             <h3 className="">Branding</h3>
-            <h3 className="blur-[12px]">marketing</h3>
-            <h3 className="blur-[12px]">developing</h3>
+            <h3 className="blur-[12px]">Marketing</h3>
+            <h3 className="blur-[12px]">Developing</h3>
           </div>
         </div>
       </div>

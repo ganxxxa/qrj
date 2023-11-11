@@ -24,12 +24,12 @@ const Who = () => {
     setTimeout(() => {
       gsap.fromTo(
         split.words,
-        { scaleY: 0.6, opacity: 0, x: -25 },
+        {  color:"#888",  opacity: 0.6,},
         {
           scaleY: 1,
           x: 0,
           opacity: 1,
-
+          color:"#fff",
           stagger: 1, // Adjust the stagger value to control the delay between words
           ease: "power4",
           scrollTrigger: {
@@ -43,7 +43,7 @@ const Who = () => {
       gsap.fromTo(
         splitTitle.chars,
         {
-          duration: 2,
+          duration: 1,
           scaleX: 0,
           opacity: 0,
           y: 100,
@@ -52,13 +52,13 @@ const Who = () => {
           scaleX: 1,
           y: titleRef.current.innerHeight * 1,
           opacity: 1,
-          duration: 2,
+          // duration: 2,
           stagger: 0.4, // Adjust the stagger value to control the delay between words
           ease: "power4.In",
           scrollTrigger: {
             trigger: titleRef.current, // Trigger the animation on the entire text
             start: "top bottom",
-            end: "bottom bottom-=300",
+            end: "+=300",
             scrub: 1,
           },
         }
@@ -66,18 +66,18 @@ const Who = () => {
     });
   }, []);
   return (
-    <div className="p-6 sm:p-12 h-full flex flex-col  ">
+    <div className="py-6 px-10  sm:p-12 h-full flex flex-col  ">
       <span ref={titleRef}>
-        <h3 className="text-[#FFBF00] 2xl:text-[5vw] lg:text-[6vw] sm:text-[7vw] text-[8vw] font-semibold leading-4 tracking-wide">
+        <h3 className="text-[#FFBF00] 2xl:text-[4.5vw] lg:text-[5.6vw] sm:text-[6.7vw] text-[7.8vw] font-semibold leading-4 tracking-wide">
           WHO
         </h3>
-        <h1 className="2xl:text-[7.5vw] lg:text-[8.6vw] sm:text-[9.8vw] text-[10.6vw] font-bold tracking-wide">
+        <h1 className="2xl:text-[7.5vw]  pt-1 lg:text-[8.6vw] sm:text-[9.8vw] text-[10.6vw] font-bold tracking-wide">
           WE ARE
         </h1>
       </span>
       <p
         ref={textRef}
-        className="2xl:text-[2.3vw] lg:text-[2.7vw] sm:text-[3.6vw] text-[4vw] font-semibold tracking-wide pt-4 leading-relaxed"
+        className="2xl:text-[2.1vw] lg:text-[2.4vw] sm:text-[3.3vw] text-[3.8vw] font-semibold text-justify tracking-wide pt-4 leading-relaxed"
       >
         Before we go for this topic! It’s a better idea to discuss about what is
         a digital studio. In order to understand this kind of business better,
