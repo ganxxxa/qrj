@@ -1,10 +1,11 @@
 import React, { useRef, useLayoutEffect } from "react";
-
+import SplitText from "../utils/split.min.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Members = () => {
   const sectionRef = useRef(null);
+  const headerRef = useRef(null);
   const triggerRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
@@ -17,12 +18,12 @@ const Members = () => {
     { src: "/members/2.jpg", name: "Melika Abyazi", job: "CO-Founder" },
     { src: "/members/3.jpg", name: "Ali Shetabi", job: "Art Director" },
     {
-      src: "/members/4.jpg",
+      src: "/members/0.jpg",
       name: "Ehsan Forouzan Kia",
       job: "Graphic Designer",
     },
     {
-      src: "/members/5.jpg",
+      src: "/members/0.jpg",
       name: "Mahdi Ahmadi",
       job: "Graphic / Motion Designer",
     },
@@ -33,7 +34,7 @@ const Members = () => {
       job: "Full-Stack Developer",
     },
     {
-      src: "/members/6.jpg",
+      src: "/members/0.jpg",
       name: "Amirreza Safarali Zadeh",
       job: "Front-End Developer",
     },
@@ -44,11 +45,33 @@ const Members = () => {
     },
   ];
   useLayoutEffect(() => {
+    const splitTitle = new SplitText(headerRef.current, {
+      type: "chars",
+      charsClass: "char",
+    });
+
+    gsap.fromTo(
+      splitTitle.chars,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.03,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top center",
+          end: "+=100",
+        },
+      }
+    );
+
     const pin = gsap.fromTo(
       sectionRef.current,
       {
         translateX: "0%",
-      
       },
       {
         translateX: () => {
@@ -56,7 +79,8 @@ const Members = () => {
           const sectionWidth =
             (sectionRef.current.lastChild.clientWidth + 46) *
               sectionRef.current.childElementCount -
-            sectionRef.current.clientWidth - 12 ;
+            sectionRef.current.clientWidth -
+            12;
 
           return `-${sectionWidth}px`;
         },
@@ -80,17 +104,18 @@ const Members = () => {
   }, []);
 
   return (
-    <section className=" overflow-hidden">
+    <section className=" font-gilroy overflow-hidden">
       <div ref={triggerRef} className="w-screen h-screen">
         <h1
+          ref={headerRef}
           style={{ textShadow: "-3px 3px 8px rgba(92, 92, 92, 0.2);" }}
-          className="py-24 sm:py-10  text-center sm:text-start sm:px-28 w-full 2xl:text-5xl text-4xl font-bold uppercase bg-black"
+          className="py-[12vh] sm:py-10  text-center sm:text-start sm:px-28 w-full 2xl:text-5xl text-4xl font-bold uppercase bg-black"
         >
           garage members
         </h1>
         <div
           ref={sectionRef}
-          className="ml-10 sm:ml-16 mt-[1vh] flex flex-grow justify-start  w-screen gap-10"
+          className="ml-10 sm:ml-16   flex flex-grow justify-start  w-screen gap-10"
         >
           {imageSources.map((item, index) => (
             <div className="max-w-[600px] min-w-[260px] sm:h-[60vh] h-[50vh] flex-shrink-0">

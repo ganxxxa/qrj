@@ -24,12 +24,12 @@ const Who = () => {
     setTimeout(() => {
       gsap.fromTo(
         split.words,
-        {  color:"#888",  opacity: 0.6,},
+        { color: "#888", opacity: 0.6 },
         {
           scaleY: 1,
           x: 0,
           opacity: 1,
-          color:"#fff",
+          color: "#fff",
           stagger: 1, // Adjust the stagger value to control the delay between words
           ease: "power4",
           scrollTrigger: {
@@ -54,11 +54,11 @@ const Who = () => {
           opacity: 1,
           // duration: 2,
           stagger: 0.4, // Adjust the stagger value to control the delay between words
-          ease: "power4.In",
+          ease: "power2.In",
           scrollTrigger: {
             trigger: titleRef.current, // Trigger the animation on the entire text
             start: "top bottom",
-            end: "+=300",
+            end: "+=200",
             scrub: 1,
           },
         }
@@ -66,7 +66,7 @@ const Who = () => {
     });
   }, []);
   return (
-    <div className="py-6 px-10  sm:p-12 h-full flex flex-col  ">
+    <div className="py-6 px-8  sm:p-12 h-full flex flex-col  ">
       <span ref={titleRef}>
         <h3 className="text-[#FFBF00] 2xl:text-[4.5vw] lg:text-[5.6vw] sm:text-[6.7vw] text-[7.8vw] font-semibold leading-4 tracking-wide">
           WHO

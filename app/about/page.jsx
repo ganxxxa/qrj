@@ -59,8 +59,7 @@ const Page = () => {
     //     ease: "power4.Out",
     //   },
     // });
-    tl
-    .fromTo(
+    tl.fromTo(
       text,
       {
         // opacity: 0,
@@ -71,9 +70,8 @@ const Page = () => {
         // opacity: 1,
         scaleY: 0.7,
         opacity: 0,
-      },
-      
-    )
+      }
+    );
     // .to(
     //   [text],
     //   {
@@ -91,7 +89,7 @@ const Page = () => {
         trigger: contactRef.current,
         start: "top center",
         end: "top center-=200",
-        scrub: 2,
+
         ease: "power4.In",
       },
     });
