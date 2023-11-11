@@ -77,7 +77,7 @@ const How = () => {
       <img src="/how.svg" className="w-screen" />
       <p
         ref={textRef}
-        className=" text-justify 2xl:text-[30px]  lg:text-[2.1vw] md:text-[2.7vw] sm:text-[3.3vw] text-[3.7vw] font-semibold tracking-wide pt-4"
+        className=" text-justify 2xl:text-[30px]  lg:text-[2.1vw] md:text-[2.7vw] sm:text-[3.3vw] text-[3.7vw] font-normal  tracking-wide pt-4"
       >
         We mentioned that we provide our services agile, expert-oriented and
         integrated. Those are Garage digital studio SCAs.

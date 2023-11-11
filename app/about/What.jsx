@@ -75,8 +75,10 @@ const What = () => {
       );
 gsap.fromTo(
   blurRef.current,{
+    opacity:0,
     x:700
   },{
+    opacity:1,
     x:0,
     ease:"power1.out",
     scrollTrigger: {
@@ -119,9 +121,9 @@ gsap.fromTo(
   return (
     <main
       ref={containerRef}
-      className="h-[300vh] px-5 w-screen sm:my-16  sm:py-20 sm:px-28 xl:my-[4vw]"
+      className="h-[300vh] px-4 w-screen sm:my-16  sm:py-20 sm:px-28 xl:my-[4vw]"
     >
-      <div className="h-screen w-full flex flex-col justify-evenly  gap-[3vh] sm:gap-0 2xl:translate-y-12 relative">
+      <div className="h-screen w-full flex flex-col justify-evenly  gap-[3vh] lg:gap-0 2xl:translate-y-12 relative">
         <span ref={titleRef}>
           <h3 className="text-[#FFBF00]   2xl:text-[4.5vw] lg:text-[5.6vw] sm:text-[6.7vw] text-[8vw]  font-semibold leading-6 tracking-wide">
             WHAT
@@ -130,10 +132,10 @@ gsap.fromTo(
             WE DO
           </h1>
         </span>
-        <div className="flex flex-col-reverse  sm:flex-row h-[70vh] sm:h-full translate-y-6 justify-between">
+        <div className="flex flex-col-reverse  lg:flex-row h-[70vh] lg:h-full translate-y-6 justify-between">
           <p
             ref={textRef}
-            className="2xl:text-[30px] lg:text-[1.65vw] md:text-[2.5vw] sm:text-[2.8vw] text-[calc(3.4vw+2px)] sm:w-2/3 h-3/4 opacity-0 font-semibold text-justify tracking-wide pt-4 "
+            className="2xl:text-[30px] lg:text-[1.65vw] md:text-[2.5vw] sm:text-[2.8vw] text-[calc(2.3vw+1vh)] lg:w-2/3 h-3/4 opacity-0 font-normal text-justify tracking-wide pt-4 "
           >
             Elevate your brand with our comprehensive branding and brand
             strategy services at our advertising studio. We meticulously craft
@@ -147,7 +149,7 @@ gsap.fromTo(
           </p>
           <div
             ref={blurRef}
-            className="text-2xl flex sm:flex-col md:gap-28 2xl:gap-40 sm:gap-20 gap-[5vh] text-[5.4vw] lg:text-[4vw] content-between translate-y-1/4 sm:-translate-y-20 2xl:-translate-y-40"
+            className="text-2xl flex lg:flex-col md:gap-28 2xl:gap-40 sm:gap-20 gap-[5vw] text-[4.7vw] sm:text-[3.7vw] justify-around  lg:justify-normal  content-between translate-y-1/4 sm:-translate-y-20 2xl:-translate-y-40"
           >
             <h3 className="">Branding</h3>
             <h3 className="blur-[12px]">Marketing</h3>

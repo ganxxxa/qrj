@@ -48,6 +48,7 @@ const Members = () => {
       sectionRef.current,
       {
         translateX: "0%",
+      
       },
       {
         translateX: () => {

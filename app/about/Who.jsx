@@ -77,7 +77,7 @@ const Who = () => {
       </span>
       <p
         ref={textRef}
-        className="2xl:text-[2.1vw] lg:text-[2.4vw] sm:text-[3.3vw] text-[3.8vw] font-semibold text-justify tracking-wide pt-4 leading-relaxed"
+        className="2xl:text-[2.1vw] lg:text-[2.4vw] sm:text-[3.3vw] text-[3.8vw] font-normal text-justify tracking-wide pt-4 leading-relaxed"
       >
         Before we go for this topic! It’s a better idea to discuss about what is
         a digital studio. In order to understand this kind of business better,
