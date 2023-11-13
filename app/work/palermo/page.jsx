@@ -49,6 +49,21 @@ const page = () => {
         bg="sm:py-16"
       />
       {/* <VideoPlayer /> */}
+      <Images
+        title="Brand"
+        title2="Personality"
+        imageSrc="/palermo/personality.png"
+        p=" sm:py-10"
+        titleColor="text-[#009c47]"
+      />
+      <Images
+        title="Brand"
+        title2="Archetype"
+        imageSrc="/palermo/arch.png"
+        p="mb-16 sm:py-10"
+        titleColor="text-[#009c47]"
+        width="sm:w-3/4 lg:w-1/2  "
+      />
       <Social
         img1="/palermo/social/1.jpg"
         img2="/palermo/social/2.jpg"
