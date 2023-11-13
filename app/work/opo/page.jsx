@@ -74,19 +74,19 @@ const page = () => {
         textColor="text-[#29A9E1]"
       />
       <Packaging
-        width="w-2/5"
+        width="sm:w-2/5"
         headingText={customHeading}
         imageSources={customImageSources}
         backgroundColor={customBackgroundColor}
       />
       <Packaging
-        width="w-2/5"
+        width="sm:w-2/5"
         headingText={customHeading2}
         imageSources={customImageSources2}
         backgroundColor={customBackgroundColor}
       />
       <Packaging
-        width="w-2/5"
+        width="sm:w-2/5"
         headingText={customHeading3}
         imageSources={customImageSources3}
         backgroundColor={customBackgroundColor}
