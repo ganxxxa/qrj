@@ -54,14 +54,14 @@ const page = () => {
         title2="Personality"
         imageSrc="/palermo/personality.png"
         p=" sm:py-10"
-        titleColor="text-[#009c47]"
+        titleColor="text-[#19B6BB]"
       />
       <Images
         title="Brand"
         title2="Archetype"
         imageSrc="/palermo/arch.png"
         p="mb-16 sm:py-10"
-        titleColor="text-[#009c47]"
+        titleColor="text-[#19B6BB]"
         width="sm:w-3/4 lg:w-1/2  "
       />
       <Social
@@ -81,16 +81,18 @@ const page = () => {
       />
 
       <Images
-        title="UI/UX Design"
+        title="UI/UX "
+        title2="Design "
         imageSrc="/palermo/ui.jpg"
         bg="bg-[#fff]"
         textColor="text-black"
+        titleColor="text-[#19B6BB]"
       />
       <Images imageSrc="/palermo/morph/3.jpg" bg="bg-[#fff]" />
       <Images imageSrc="/palermo/morph/4.jpg" bg="bg-[#fff]" />
       <Images
         title="UI"
-        title2="DESIGN SYSTEM"
+        title2="Design System"
         titleColor="text-[#19B6BB]"
         imageSrc="/palermo/uids.jpg"
         bg="bg-[#fff] py-8 "

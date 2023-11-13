@@ -18,7 +18,6 @@ const page = () => {
     "/shinfer/package/3.jpg",
     "/shinfer/package/4.jpg",
     "/shinfer/package/5.jpg",
-    "/shinfer/package/6.jpg",
   ];
   const customBackgroundColor = "bg-[#242424]";
   const customHeading2 = "stationary";
@@ -26,7 +25,6 @@ const page = () => {
     "/shinfer/stationary/1.jpg",
     "/shinfer/stationary/2.jpg",
     "/shinfer/stationary/3.jpg",
-    "/shinfer/stationary/4.jpg",
   ];
   const customImageSources3 = [
     "/shinfer/pattern/1.jpg",
@@ -59,7 +57,21 @@ const page = () => {
         bg="sm:py-16"
       />
       {/* <VideoPlayer /> */}
-
+      <Images
+        title="Brand"
+        title2="Personality"
+        imageSrc="/shinfer/personality.png"
+        p=" sm:py-10"
+        titleColor="text-[#009c47]"
+      />
+      <Images
+        title="Brand"
+        title2="Archetype"
+        imageSrc="/shinfer/arch.png"
+        p="mb-16 sm:py-10"
+        titleColor="text-[#009c47]"
+        width="sm:w-3/4 lg:w-1/2  "
+      />
       <Packaging
         headingText={customHeading}
         imageSources={customImageSources}
