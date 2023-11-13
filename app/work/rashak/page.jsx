@@ -131,7 +131,7 @@ const page = () => {
         bg="bg-[#fff]"
         p="mb-16 sm:py-10"
         imageSrc="/rashak/story5.png"
-        // width="w-3/4"
+        width="sm:w-3/4"
         titleColor="text-[#009c47]"
       />
       <Pallete src="/rashak/pallete.jpg" titleColor="text-[#009c47]" />
@@ -154,8 +154,16 @@ const page = () => {
         bg="bg-[#fff] pb-8 "
         textColor="text-black"
       />
-      <Images imageSrc="/rashak/morph/3.jpg" bg="bg-[#fff] pb-8 " />
-      <Images imageSrc="/rashak/morph/4.jpg" bg="bg-[#fff] pb-8 " />
+      <Images
+        imageSrc="/rashak/morph/3.jpg"
+        width="sm:w-4/5"
+        bg="bg-[#fff] pb-8 "
+      />
+      <Images
+        imageSrc="/rashak/morph/4.jpg"
+        width="sm:w-4/5"
+        bg="bg-[#fff] pb-8 "
+      />
       <Images
         title="UI"
         title2="DESIGN SYSTEM"
