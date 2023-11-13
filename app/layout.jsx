@@ -46,26 +46,26 @@ export default function RootLayout({ children }) {
     };
   }, [windowWidth]); // Include windowWidth in the dependency array to ensure the effect runs on windowWidth change
 
-  useLayoutEffect(() => {
-    const lenis = new Lenis({
-      lerp: 0.05,
-      smoothTouch: true,
-      easing: "easeInCubic",
-    });
+  // useLayoutEffect(() => {
+  //   const lenis = new Lenis({
+  //     lerp: 0.05,
+  //     smoothTouch: true,
+  //     easing: "easeInCubic",
+  //   });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    lenis.on("scroll", ScrollTrigger.update);
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   lenis.on("scroll", ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+  //   gsap.ticker.add((time) => {
+  //     lenis.raf(time * 1000);
+  //   });
 
-    gsap.ticker.lagSmoothing(0);
-    requestAnimationFrame(raf);
-  }, []);
+  //   gsap.ticker.lagSmoothing(0);
+  //   requestAnimationFrame(raf);
+  // }, []);
 
   return (
     <html>

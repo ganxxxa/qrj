@@ -32,7 +32,7 @@ const page = () => {
     <main className="flex min-w-screen  flex-col items-center bg-[#151515] ">
       <Intro
         src="/palermo/palermo.svg"
-        title="Food Industry"
+        title="stone and ceramic products"
         name="Palermo Business"
         description=" , a leading force in Iran's slab and ceramic industry, excels internationally. Renowned for top-tier craftsmanship and innovation, it delivers premium quality products. With a global footprint, it sets industry standards through superior materials, technology, and global collaborations. Palermo Business offers discerning client’s world-class solutions in surface design, making it a trusted partner for luxury and sophistication."
         color="text-[#19B6BB]"

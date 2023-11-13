@@ -42,11 +42,12 @@ const page = () => {
         title="Home Appliances"
         name="SHINFER"
         description="SHINFER is a distinguished name in Iran's home equipment industry, specializing in crafting premium ovens and appliances. With a relentless commitment to quality and innovation, they have earned a reputation for excellence. Their state-of-the-art factory employs advanced technology to deliver reliable, efficient, and stylish home solutions."
-        color="text-[#96171A]"
+        color="text-[#DC2B2F]"
         colorbg="bg-[#96171A]"
         bg="/shinfer/shinfer-logo.svg"
       />
       <Story
+        challengeColor="text-[#DC2B2F]"
         title="Brand Identity (Brand Book),
         Pictogram and Packaging Design,
         Digital Infrastructure Development (Website)"
@@ -62,14 +63,14 @@ const page = () => {
         title2="Personality"
         imageSrc="/shinfer/personality.png"
         p=" sm:py-10"
-        titleColor="text-[#009c47]"
+        titleColor="text-[#007E72]"
       />
       <Images
         title="Brand"
         title2="Archetype"
         imageSrc="/shinfer/arch.png"
         p="mb-16 sm:py-10"
-        titleColor="text-[#009c47]"
+        titleColor="text-[#007E72]"
         width="sm:w-3/4 lg:w-1/2  "
       />
       <Packaging
@@ -85,29 +86,40 @@ const page = () => {
       <Morph
         beforeImageSrc="/shinfer/morph/1.jpg"
         afterImageSrc="/shinfer/morph/2.jpg"
-        title="LOGO DESIGN"
+        title="Logo "
+        title2="Design"
+        titleColor="text-[#007E72]"
       />
 
       <Images
-        title="SIGN DESIGN"
-        width="900"
+        title="Sign "
         imageSrc="/shinfer/story4.png"
-        bg="sm:py-16"
+        p="mb-16 py-8 sm:py-20"
+        width="w-2/3"
+        title2="Design"
+        titleColor="text-[#007E72]"
       />
       <Images
-        title="LOGO IDEAS"
+        title="Logo"
+        title2=" Ideas"
         textColor="text-black"
-        bg="bg-[#f6f6f6] sm:py-16 "
+        bg="bg-[#fff]"
+        p="mb-16 sm:py-10"
         imageSrc="/shinfer/story5.png"
+        width="sm:w-3/4"
+        titleColor="text-[#007E72]"
       />
-      <Pallete />
+      <Pallete src="/shinfer/pallete.jpg" titleColor="text-[#007E72]" />
       <Pattern title="PATTERNS" imageSources={customImageSources3} />
       <Images
-        title="ICON DESIGN"
+        title="Icon"
+        title2="Design"
+        titleColor="text-[#007E72]"
         imageSrc="/shinfer/icon.png"
-        bg="bg-[#f6f6f6] sm:py-16 "
+        bg="bg-[#fff]"
         textColor="text-black"
-        width="900"
+        width="w-4/5"
+        p=" sm:py-16 mb-10"
       />
     </main>
   );
