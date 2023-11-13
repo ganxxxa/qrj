@@ -18,11 +18,11 @@ const Story = ({
         <span className={`${challengeColor}`}> Delivered Services</span>
       </h6>
       <h3
-        className={`text-2xl lg:text-4xl tracking-wide font-semibold  leading-normal ${textColor}`}
+        className={`text-xl sm:text-2xl lg:text-4xl tracking-wide font-semibold  leading-normal ${textColor}`}
       >
         {title}
       </h3>
-      <p className="py-10 text-md sm:text-lg lg:text-xl text-justify leading-relaxed ">
+      <p className="py-10 text-sm sm:text-md lg:text-lg text-justify leading-relaxed ">
         {text}
       </p>
       <div className="py-8 mb-8 flex justify-center w-fit self-center max-h-screen md:max-h-[80vh]">

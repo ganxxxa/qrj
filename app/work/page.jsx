@@ -13,7 +13,7 @@ const page = () => {
           <h1 className="text-8xl font-bold">INNOVATION</h1>
         </div>
         <div className="flex pt-24 gap-10">
-          <div className="grid grid-cols-2 gap-4 w-[80vw] 2xl:w-[65vw]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-[80vw] 2xl:w-[65vw]">
             <Card
               backgroundColor="#E12729"
               logo="/rashak/rashak.svg"
@@ -21,7 +21,7 @@ const page = () => {
               title="Food Industry"
               paragraph=""
             />
-  
+
             <Card
               backgroundColor="#96171A"
               logo="/shinfer/shinfer.svg"
@@ -63,7 +63,7 @@ const page = () => {
               link="/work/maplemania"
               paragraph=""
             />
-                      <Card
+            <Card
               backgroundColor="#E72C47"
               logo="/darisun/darisun.svg"
               link="/work/darisun"

@@ -2,7 +2,9 @@
   @media screen and (min-width: 961px) and (max-width: 1279px) {
     min-width: 300px;
   }
-
+  @media screen and (max-width: 640px) {
+    height: 200px;
+  }
   height: 280px;
   border-radius: 8px;
   display: flex;

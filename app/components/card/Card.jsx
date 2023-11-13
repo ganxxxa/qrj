@@ -5,7 +5,7 @@ const Card = ({ backgroundColor, title, logo, link, paragraph }) => {
   return (
     <a href={link}>
       <div
-        className="blog-card relative w-full inset-shadow "
+        className="blog-card relative  w-full inset-shadow "
         style={{
           backgroundColor: `${backgroundColor}`,
           backgroundSize: "cover",

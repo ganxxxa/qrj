@@ -74,14 +74,6 @@ const page = () => {
         colorbg="bg-[#e12729]"
         bg="/rashak/rashak-logo.svg"
       />
-      <Story
-        title="Redesigning Brand Identity, Digital Infrastructure Development (Website)"
-        challengeColor="text-[#009c47]"
-        text='The food brand "Rashak" which has emerged from within a large and renowned “Seity” brand, is engaged in the procurement of raw materials and spices for major players in the food industry. In the year 1401 (2022/2023), with the development of its management structure and the entry of the third generation of managers into this organization, a redesign of the visual identity was undertaken as part of a new brand development document. Additionally, digital infrastructure (a website) was created, and the first phase of SEO was initiated. The outputs of this project, after 13 months of activity, included a redesign of the visual identity, the design and delivery of complete stationery items, the design and implementation of a new website with the capability for pre-order registration, and the initiation of the brand&apos;s initial SEO phase.'
-        imageSrc="/rashak/story1.jpg"
-        width="100%"
-        bg="sm:py-16"
-      />
       {/* <VideoPlayer /> */}
       <Images
         title="Brand"
@@ -97,6 +89,14 @@ const page = () => {
         p="mb-16 sm:py-10"
         titleColor="text-[#009c47]"
         width="sm:w-3/4 lg:w-1/2  "
+      />{" "}
+      <Story
+        title="Redesigning Brand Identity, Digital Infrastructure Development (Website)"
+        challengeColor="text-[#009c47]"
+        text='The food brand "Rashak" which has emerged from within a large and renowned “Seity” brand, is engaged in the procurement of raw materials and spices for major players in the food industry. In the year 1401 (2022/2023), with the development of its management structure and the entry of the third generation of managers into this organization, a redesign of the visual identity was undertaken as part of a new brand development document. Additionally, digital infrastructure (a website) was created, and the first phase of SEO was initiated. The outputs of this project, after 13 months of activity, included a redesign of the visual identity, the design and delivery of complete stationery items, the design and implementation of a new website with the capability for pre-order registration, and the initiation of the brand&apos;s initial SEO phase.'
+        imageSrc="/rashak/story1.jpg"
+        width="100%"
+        bg="sm:py-16"
       />
       <Packaging
         headingText={customHeading}
@@ -115,7 +115,6 @@ const page = () => {
         title2="Design"
         titleColor="text-[#009c47]"
       />
-
       <Images
         title="Sign"
         title2="Design"

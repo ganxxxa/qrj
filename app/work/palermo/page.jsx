@@ -39,15 +39,6 @@ const page = () => {
         colorbg="bg-[#3C3C3B]"
         bg="/palermo/palermo-logo.svg"
       />
-      <Story
-        title="Digital Infrastructure Development (Website & Instagram)"
-        challenge="Delivered Services"
-        challengeColor="text-[#19B6BB]"
-        text="in the year 1401 (2022/2023), with the entry of a business development consulting team into the &quot;Palermo&quot; brand, one of the market leaders in the construction industry (stone and ceramics), the brand's strategies were focused on integrating its presence in the digital space. After delivering high-level strategies from the consulting team and the board of directors to the Garage Studio, the development of digital infrastructure (a website) and the brand's social media presence (Instagram) were initiated.
-        The outputs of this project, after 12 months of activity, included the delivery of a completely new Palermo website with features such as a representative panel, specialized product categorization, and a pre-order registration process. Additionally, a new visual identity design and brand strategy were implemented seamlessly on the brand's social media network (Instagram)."
-        imageSrc="/palermo/story1.jpg"
-        bg="sm:py-16"
-      />
       {/* <VideoPlayer /> */}
       <Images
         title="Brand"
@@ -63,6 +54,15 @@ const page = () => {
         p="mb-16 sm:py-10"
         titleColor="text-[#19B6BB]"
         width="sm:w-3/4 lg:w-1/2  "
+      />{" "}
+      <Story
+        title="Digital Infrastructure Development (Website & Instagram)"
+        challenge="Delivered Services"
+        challengeColor="text-[#19B6BB]"
+        text="in the year 1401 (2022/2023), with the entry of a business development consulting team into the &quot;Palermo&quot; brand, one of the market leaders in the construction industry (stone and ceramics), the brand's strategies were focused on integrating its presence in the digital space. After delivering high-level strategies from the consulting team and the board of directors to the Garage Studio, the development of digital infrastructure (a website) and the brand's social media presence (Instagram) were initiated.
+      The outputs of this project, after 12 months of activity, included the delivery of a completely new Palermo website with features such as a representative panel, specialized product categorization, and a pre-order registration process. Additionally, a new visual identity design and brand strategy were implemented seamlessly on the brand's social media network (Instagram)."
+        imageSrc="/palermo/story1.jpg"
+        bg="sm:py-16"
       />
       <Social
         img1="/palermo/social/1.jpg"
@@ -79,7 +79,6 @@ const page = () => {
         imageSources={customImageSources2}
         backgroundColor={customBackgroundColor2}
       />
-
       <Images
         title="UI/UX "
         title2="Design "
