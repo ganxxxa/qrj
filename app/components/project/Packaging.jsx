@@ -4,7 +4,7 @@ import React, { useState, useLayoutEffect, useRef } from "react";
 import { FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion components
 
-const Packaging = ({ headingText, imageSources, backgroundColor }) => {
+const Packaging = ({ headingText, imageSources, backgroundColor, width }) => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -72,7 +72,7 @@ const Packaging = ({ headingText, imageSources, backgroundColor }) => {
           {imageSources.map((src, index) => (
             <div
               key={index}
-              className="relative h-fit rounded-lg overflow-hidden flex-shrink-0"
+              className={`relative rounded-lg overflow-hidden flex-shrink-0 ${width}`}
             >
               <div className=" translate-y-1 absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black to-100% opacity-70"></div>
               <img

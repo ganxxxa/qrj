@@ -67,7 +67,6 @@ const page = () => {
         title="Brand Identity (Brand Book),
       Pictogram and Packaging Design,
       Digital Infrastructure Development (Website)"
-        challenge="Delivered Services"
         text="In the year 2022, with the entry of a business development consulting team into the 'Shinfer' brand, which had previously been engaged in industrial manufacturing for major Iranian oven and gas brands, the brand decided to introduce itself as a creative and innovative brand in the Iranian oven and gas industry, utilizing its internal and technological capabilities. After delivering high-level strategies from the consulting team and the board of directors to the Garage Digital Studio, the project encompassed the design and development of visual identity, pictograms, and product packaging in the first phase. In the second phase, the focus was on the development of Shinfer's digital infrastructure (website).
       The outputs of this project, after 6 months of operation in two operational phases, included the complete delivery of Shinfer's visual identity document, in accordance with the chosen brand archetypes, as well as pictograms and product packaging. Additionally, the brand's website, serving as the main pillar of its digital infrastructure, was delivered in the second phase."
         imageSrc="/shinfer/story1.jpg"

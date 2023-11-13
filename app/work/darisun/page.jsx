@@ -38,14 +38,29 @@ const page = () => {
         colorbg="bg-[#E72C47]"
         bg="/darisun/darisun-logo.svg"
       />
+      <Images
+        title="Brand"
+        title2="Personality"
+        imageSrc="/darisun/personality.png"
+        p=" sm:py-10"
+        titleColor="text-[#46B8AF]"
+      />
+      <Images
+        title="Brand"
+        title2="Archetype"
+        imageSrc="/darisun/arch.png"
+        p="mb-16 sm:py-10"
+        titleColor="text-[#46B8AF]"
+        width="sm:w-3/4 lg:w-1/2  "
+      />
       <Story
         title="Redesigning Brand Identity, Digital Infrastructure Development (Website)"
-        challenge="Delivered Services"
         text="With the entry of a new generation of managers into the Darisan family brand in the year 1401 (2022/2023), growth and market development strategies were put into action. Consequently, a redesign of the visual identity in line with the new brand identity, targeting new customer personas, and aligning with international markets was undertaken. This was followed by the development of the digital infrastructure for the Darisan brand (website).
         The outputs of this project, after 8 months of activity, included a complete redesign of the new brand's visual identity, the design and delivery of a brand book, and the design and implementation of a new Darisan website with features such as a sales representative panel and an order processing system."
         imageSrc="/darisun/story1.jpg"
         width="100%"
         bg="sm:py-16"
+        challengeColor="text-[#E72C47]"
       />
       {/* <VideoPlayer /> */}
 
@@ -62,32 +77,42 @@ const page = () => {
       <Morph
         beforeImageSrc="/darisun/morph/1.jpg"
         afterImageSrc="/darisun/morph/2.jpg"
-        title="LOGO DESIGN"
+        title="Logo "
+        title2="Design"
+        titleColor="text-[#46B8AF]"
       />
-
       <Images
-        title="SIGN DESIGN"
-        width="900"
+        title="Sign "
         imageSrc="/darisun/story4.png"
-        bg="sm:py-16"
+        p="mb-16 py-8 sm:py-20"
+        width="w-2/3"
+        title2="Design"
+        titleColor="text-[#46B8AF]"
       />
       <Images
-        title="LOGO IDEAS"
+        title="Logo"
+        title2=" Ideas"
         textColor="text-black"
-        bg="bg-[#f6f6f6] sm:py-16 "
+        bg="bg-[#fff]"
+        p="mb-16 sm:py-10"
         imageSrc="/darisun/story5.png"
+        width="sm:w-3/4"
+        titleColor="text-[#46B8AF]"
       />
-      <Pallete />
-
+      <Pallete src="/darisun/pallete.jpg" titleColor="text-[#007E72]" />
       <Images
-        title="UI/UX Design"
+        title="UI/UX"
+        title2="Design"
+        titleColor="text-[#46B8AF]"
         imageSrc="/darisun/ui.jpg"
-        bg="bg-[#f6f6f6]"
+        bg="bg-[#fff]"
         textColor="text-black"
       />
-      <Morph
-        beforeImageSrc="/darisun/morph/3.jpg"
-        afterImageSrc="/darisun/morph/4.jpg"
+      <Images imageSrc="/darisun/morph/3.jpg" width="sm:w-4/5" bg="bg-[#fff]" />
+      <Images
+        imageSrc="/darisun/morph/4.jpg"
+        width="sm:w-4/5"
+        bg="bg-[#fff] pb-16 "
       />
     </main>
   );

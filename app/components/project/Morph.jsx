@@ -44,7 +44,7 @@ const Morph = ({
           ref={sectionRef}
           className="relative  h-[40vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]"
         >
-          <h1 className="text-xl sm:text-4xl mt-12 sm:mt-16 lg:mt-20 px-10 sm:px-24 lg:text-5xl 2xl:text-6xl text-black font-bold w-screen sm:absolute z-40">
+          <h1 className="text-xl sm:text-4xl mt-12 sm:mt-16  px-10 sm:px-24 lg:text-5xl 2xl:text-6xl text-black font-bold w-screen sm:absolute z-40">
             {title}
             <span className={`${titleColor}`}>{title2}</span>
           </h1>

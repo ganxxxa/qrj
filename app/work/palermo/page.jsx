@@ -57,7 +57,6 @@ const page = () => {
       />{" "}
       <Story
         title="Digital Infrastructure Development (Website & Instagram)"
-        challenge="Delivered Services"
         challengeColor="text-[#19B6BB]"
         text="in the year 1401 (2022/2023), with the entry of a business development consulting team into the &quot;Palermo&quot; brand, one of the market leaders in the construction industry (stone and ceramics), the brand's strategies were focused on integrating its presence in the digital space. After delivering high-level strategies from the consulting team and the board of directors to the Garage Studio, the development of digital infrastructure (a website) and the brand's social media presence (Instagram) were initiated.
       The outputs of this project, after 12 months of activity, included the delivery of a completely new Palermo website with features such as a representative panel, specialized product categorization, and a pre-order registration process. Additionally, a new visual identity design and brand strategy were implemented seamlessly on the brand's social media network (Instagram)."
@@ -94,7 +93,7 @@ const page = () => {
         title2="Design System"
         titleColor="text-[#19B6BB]"
         imageSrc="/palermo/uids.jpg"
-        bg="bg-[#fff] py-8 "
+        bg="bg-[#fff] pt-8 pb-16"
         textColor="text-black"
         width="px-10 sm:w-2/3"
       />

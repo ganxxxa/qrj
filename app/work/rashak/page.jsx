@@ -150,18 +150,14 @@ const page = () => {
         title2="Design"
         titleColor="text-[#009c47]"
         imageSrc="/rashak/ui.jpg"
-        bg="bg-[#fff] pb-8 "
+        bg="bg-[#fff]"
         textColor="text-black"
       />
-      <Images
-        imageSrc="/rashak/morph/3.jpg"
-        width="sm:w-4/5"
-        bg="bg-[#fff] pb-8 "
-      />
+      <Images imageSrc="/rashak/morph/3.jpg" width="sm:w-4/5" bg="bg-[#fff]" />
       <Images
         imageSrc="/rashak/morph/4.jpg"
         width="sm:w-4/5"
-        bg="bg-[#fff] pb-8 "
+        bg="bg-[#fff] pb-16"
       />
       <Images
         title="UI"
