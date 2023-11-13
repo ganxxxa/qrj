@@ -12,7 +12,7 @@ const Story = ({
 }) => {
   return (
     <section
-      className={`w-full   h-full px-4 sm:px-24 lg:px-44  flex flex-col gap-6 ${bg}`}
+      className={`w-full   h-full px-10 sm:px-24 lg:px-44  flex flex-col gap-6 ${bg}`}
     >
       <h6 className="text-lg lg:text-2xl text-[#009c47] tracking-wide ">
         <span className={`${challengeColor}`}> Delivered Services</span>

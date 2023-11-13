@@ -63,7 +63,13 @@ const page = () => {
         challengeColor="text-[#E72C47]"
       />
       {/* <VideoPlayer /> */}
-
+      <Morph
+        beforeImageSrc="/darisun/morph/1.jpg"
+        afterImageSrc="/darisun/morph/2.jpg"
+        title="Logo "
+        title2="Design"
+        titleColor="text-[#46B8AF]"
+      />
       <Packaging
         headingText={customHeading}
         imageSources={customImageSources}
@@ -74,13 +80,7 @@ const page = () => {
         imageSources={customImageSources2}
         backgroundColor={customBackgroundColor2}
       />
-      <Morph
-        beforeImageSrc="/darisun/morph/1.jpg"
-        afterImageSrc="/darisun/morph/2.jpg"
-        title="Logo "
-        title2="Design"
-        titleColor="text-[#46B8AF]"
-      />
+
       <Images
         title="Sign "
         imageSrc="/darisun/story4.png"

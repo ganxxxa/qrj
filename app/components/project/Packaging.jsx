@@ -61,7 +61,7 @@ const Packaging = ({ headingText, imageSources, backgroundColor, width }) => {
       <div
         className={`flex flex-col items-start justify-around py-10 sm:py-16 w-screen`}
       >
-        <h3 className="px-10 sm:px-16 lg:px-28 lg:text-5lx py-8 text-xl sm:text-2xl md:text-4xl lg:text-5lx xl:text-6xl">
+        <h3 className="px-10 sm:px-16 lg:px-28 py-8 text-2xl sm:text-4xl lg:text-5xl 2xl:text-6xl">
           {headingText}
         </h3>
         <div

@@ -97,6 +97,13 @@ const page = () => {
         imageSrc="/rashak/story1.jpg"
         width="100%"
         bg="sm:py-16"
+      />{" "}
+      <Morph
+        beforeImageSrc="/rashak/morph/1.jpg"
+        afterImageSrc="/rashak/morph/2.jpg"
+        title="Logo "
+        title2="Design"
+        titleColor="text-[#009c47]"
       />
       <Packaging
         headingText={customHeading}
@@ -107,13 +114,6 @@ const page = () => {
         headingText={customHeading2}
         imageSources={customImageSources2}
         backgroundColor={customBackgroundColor2}
-      />
-      <Morph
-        beforeImageSrc="/rashak/morph/1.jpg"
-        afterImageSrc="/rashak/morph/2.jpg"
-        title="Logo "
-        title2="Design"
-        titleColor="text-[#009c47]"
       />
       <Images
         title="Sign"

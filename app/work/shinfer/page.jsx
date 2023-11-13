@@ -71,6 +71,13 @@ const page = () => {
       The outputs of this project, after 6 months of operation in two operational phases, included the complete delivery of Shinfer's visual identity document, in accordance with the chosen brand archetypes, as well as pictograms and product packaging. Additionally, the brand's website, serving as the main pillar of its digital infrastructure, was delivered in the second phase."
         imageSrc="/shinfer/story1.jpg"
         bg="sm:py-16"
+      />{" "}
+      <Morph
+        beforeImageSrc="/shinfer/morph/1.jpg"
+        afterImageSrc="/shinfer/morph/2.jpg"
+        title="Logo "
+        title2="Design"
+        titleColor="text-[#007E72]"
       />
       <Packaging
         headingText={customHeading}
@@ -81,13 +88,6 @@ const page = () => {
         headingText={customHeading2}
         imageSources={customImageSources2}
         backgroundColor={customBackgroundColor2}
-      />
-      <Morph
-        beforeImageSrc="/shinfer/morph/1.jpg"
-        afterImageSrc="/shinfer/morph/2.jpg"
-        title="Logo "
-        title2="Design"
-        titleColor="text-[#007E72]"
       />
       <Images
         title="Sign "
