@@ -9,6 +9,7 @@ import Pattern from "../../components/project/pattern/Pattern";
 
 import Morph from "../../components/project/Morph";
 import Images from "@/app/components/project/Images";
+import Social from "@/app/components/project/Social";
 
 const page = () => {
   const customHeading = "Products Posts";
@@ -41,17 +42,17 @@ const page = () => {
       <Story
         title="Digital Infrastructure Development (Website & Instagram)"
         challenge="Delivered Services"
-        text="n the year 1401 (2022/2023), with the entry of a business development consulting team into the &quot;Palermo&quot; brand, one of the market leaders in the construction industry (stone and ceramics), the brand's strategies were focused on integrating its presence in the digital space. After delivering high-level strategies from the consulting team and the board of directors to the Garage Studio, the development of digital infrastructure (a website) and the brand's social media presence (Instagram) were initiated.
+        challengeColor="text-[#19B6BB]"
+        text="in the year 1401 (2022/2023), with the entry of a business development consulting team into the &quot;Palermo&quot; brand, one of the market leaders in the construction industry (stone and ceramics), the brand's strategies were focused on integrating its presence in the digital space. After delivering high-level strategies from the consulting team and the board of directors to the Garage Studio, the development of digital infrastructure (a website) and the brand's social media presence (Instagram) were initiated.
         The outputs of this project, after 12 months of activity, included the delivery of a completely new Palermo website with features such as a representative panel, specialized product categorization, and a pre-order registration process. Additionally, a new visual identity design and brand strategy were implemented seamlessly on the brand's social media network (Instagram)."
         imageSrc="/palermo/story1.jpg"
         bg="sm:py-16"
       />
       {/* <VideoPlayer /> */}
-      <Images
-        title="SOCIAL MEDIA DESIGN"
-        imageSrc="/palermo/story4.png"
-        bg="sm:py-16 bg-[#fff]"
-        textColor="text-black"
+      <Social
+        img1="/palermo/social/1.jpg"
+        img2="/palermo/social/2.jpg"
+        textColor="text-[#46B8AF]"
       />
       <Packaging
         headingText={customHeading}
@@ -67,15 +68,19 @@ const page = () => {
       <Images
         title="UI/UX Design"
         imageSrc="/palermo/ui.jpg"
-        bg="bg-[#f6f6f6]"
+        bg="bg-[#fff]"
         textColor="text-black"
       />
- 
+      <Images imageSrc="/palermo/morph/3.jpg" bg="bg-[#fff]" />
+      <Images imageSrc="/palermo/morph/4.jpg" bg="bg-[#fff]" />
       <Images
-        title="UI DESIGN SYSTEM"
+        title="UI"
+        title2="DESIGN SYSTEM"
+        titleColor="text-[#19B6BB]"
         imageSrc="/palermo/uids.jpg"
-        bg="bg-[#f6f6f6] sm:pb-8 "
+        bg="bg-[#fff] py-8 "
         textColor="text-black"
+        width="px-10 sm:w-2/3"
       />
     </main>
   );

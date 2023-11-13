@@ -6,47 +6,51 @@ import Header from "./components/header/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
-import { useLayoutEffect ,useState,useEffect} from "react";
+import { useLayoutEffect, useState, useEffect } from "react";
 import gsap from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function RootLayout({ children }) {
+  let width;
 
-  const [windowWidth, setWindowWidth] = useState(0);
+  if (typeof window !== "undefined") {
+    width = window.innerWidth;
+  } else {
+    // Handle the case when window is undefined
+    width = 0; // or any default value you prefer
+  }
+  const [windowWidth, setWindowWidth] = useState(width);
   const refreshPage = () => {
     window.location.reload(true);
   };
 
   // Check window width on resize
   const checkWindowWidth = () => {
-
     // Update the state with the current window width
     setWindowWidth(window.innerWidth);
 
     // Check if the window width is less than the threshold and not equal to the state
-    if ( window.innerWidth !== windowWidth) {
+    if (window.innerWidth != windowWidth) {
       refreshPage();
-  
-
     }
   };
 
   useEffect(() => {
-    window.addEventListener('resize', checkWindowWidth);
-   
+    window.addEventListener("resize", checkWindowWidth);
+
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener('resize', checkWindowWidth);
+      window.removeEventListener("resize", checkWindowWidth);
     };
-  }, []); // Include windowWidth in the dependency array to ensure the effect runs on windowWidth change
+  }, [windowWidth]); // Include windowWidth in the dependency array to ensure the effect runs on windowWidth change
 
   useLayoutEffect(() => {
     const lenis = new Lenis({
       lerp: 0.05,
       smoothTouch: true,
-      easing: "easeOutCirc",
+      easing: "easeInCubic",
     });
 
     function raf(time) {

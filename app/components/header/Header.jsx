@@ -27,14 +27,11 @@ const Header = () => {
     };
   }, []);
   return (
-    <nav className="z-10 flex flex-col justify-between py-12 px-4 md:px-28 items-center bg-opacity-50 bg-black absolute top-0 left-0 w-full ">
+    <nav className="z-40 flex flex-col justify-between py-12 px-4 md:px-28 items-center bg-opacity-50 bg-black absolute top-0 left-0 w-full ">
       <div className="flex justify-between items-center w-full ">
         <img src="/logo.svg" className="z-50" />
         <div className="flex justify-between gap-32">
-          <div
-            ref={navRef}
-            className={`menu z-40 ${isOpen && "responsive_nav"}`}
-          >
+          <div ref={navRef} className={`menu  ${isOpen && "responsive_nav"}`}>
             <ul className="flex flex-col lg:flex-row gap-12 items-center lg:justify-end text-lg">
               <a href="/">home</a>
               <Link href="/work">services</Link>

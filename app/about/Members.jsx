@@ -62,8 +62,9 @@ const Members = () => {
         stagger: 0.03,
         scrollTrigger: {
           trigger: triggerRef.current,
-          start: "top center",
+          start: "top bottom-=100",
           end: "+=100",
+          scrub: 1,
         },
       }
     );
@@ -108,7 +109,7 @@ const Members = () => {
       <div ref={triggerRef} className="w-screen h-screen">
         <h1
           ref={headerRef}
-          style={{ textShadow: "-3px 3px 8px rgba(92, 92, 92, 0.2);" }}
+          style={{ textShadow: "-3px 3px 8px rgba(92, 92, 92, 0.2)" }}
           className="py-[12vh] sm:py-10  text-center sm:text-start sm:px-28 w-full 2xl:text-5xl text-4xl font-bold uppercase bg-black"
         >
           garage members
@@ -118,11 +119,13 @@ const Members = () => {
           className="ml-10 sm:ml-16   flex flex-grow justify-start  w-screen gap-10"
         >
           {imageSources.map((item, index) => (
-            <div className="max-w-[600px] min-w-[260px] sm:h-[60vh] h-[50vh] flex-shrink-0">
+            <div
+              key={index}
+              className="max-w-[600px] min-w-[260px] sm:h-[60vh] h-[50vh] flex-shrink-0"
+            >
               <img
                 className="img-ptrn rounded-none h-full object-cover"
                 src={item.src}
-                key={index}
               />
               <h3 className="font-bold text-[#FFBF00]  text-xl lg:text-2xl  py-2">
                 {item.name}

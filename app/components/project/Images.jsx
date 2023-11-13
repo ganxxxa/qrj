@@ -1,18 +1,29 @@
 import React from "react";
 
-const Images = ({ width, title, challenge, text, imageSrc, bg, textColor }) => {
+const Images = ({
+  width,
+  title,
+  titleColor,
+  title2,
+  imageSrc,
+  bg,
+  textColor,
+  p,
+}) => {
   return (
-    <section
-      className={`w-full h-full px-4 sm:px-12 md:px-18 lg:px-28 2xl:px-56 flex flex-col items-center gap-32 ${bg}`}
-    >
-      <h3
-        className={`text-2xl lg:text-5xl tracking-wide pt-10 font-bold self-start uppercase leading-normal ${textColor}`}
+    <section className={`${bg}`}>
+      <div
+        className={`w-screen h-full px-10 sm:px-28 2xl:px-56 flex flex-col items-center gap-12 lg:gap-16 2xl:gap-24 ${p}`}
       >
-        {title}
-      </h3>
+        <h3
+          className={`text-xl sm:text-4xl lg:text-5xl tracking-wide pt-10 font-bold self-start leading-normal ${textColor}`}
+        >
+          {title} <span className={`${titleColor}`}>{title2}</span>
+        </h3>
 
-      <div className="py-8 mb-8 flex justify-center  items-center h-full w-fit">
-        <img className="w-full sm:w-3/4 md:w-3/5"src={imageSrc} alt="Story" />
+        <div className="flex justify-center  items-center h-full w-fit">
+          <img className={`${width}`} src={imageSrc} alt="Story" />
+        </div>
       </div>
     </section>
   );

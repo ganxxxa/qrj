@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import "./style.css";
 
-const Pattern = ({ imageSources, title, bg }) => {
+const Pattern = ({ imageSources, title }) => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
@@ -23,7 +23,7 @@ const Pattern = ({ imageSources, title, bg }) => {
             sectionRef.current.firstChild.clientWidth *
               sectionRef.current.childElementCount -
             sectionRef.current.clientWidth;
-          console.log(sectionWidth);
+
           // console.log(sectionRef);
           return `-${sectionWidth}px`;
         },
@@ -51,18 +51,14 @@ const Pattern = ({ imageSources, title, bg }) => {
       <div ref={triggerRef} className="w-screen  max-h-screen">
         <h1
           style={{ textShadow: "-3px 3px 8px rgba(92, 92, 92, 0.2);" }}
-          className={`flex justify-start items-center py-12 px-24 w-full text-5xl font-bold ${bg}`}
+          className={`py-8 sm:py-10 px-10 sm:px-24 text-2xl sm:text-4xl lg:text-5xl font-bold`}
         >
           {title}
         </h1>
         <div ref={sectionRef} className="flex flex-grow">
           {imageSources.map((src, index) => (
-            <div className="h-screen  flex-shrink-0">
-              <img
-                className="rounded-none h-full  object-cover"
-                src={src}
-                key={index}
-              />
+            <div key={index} className="h-screen  flex-shrink-0">
+              <img className="rounded-none h-full  object-cover" src={src} />
             </div>
           ))}
         </div>

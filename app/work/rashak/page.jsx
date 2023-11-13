@@ -60,7 +60,7 @@ const page = () => {
   ];
 
   return (
-    <main className="flex min-w-screen  flex-col items-center bg-[#151515] ">
+    <main className="flex gap-0 min-w-screen  flex-col items-center bg-[#151515] ">
       <Intro
         src="/rashak/rashak.svg"
         title="Food Industry"
@@ -76,14 +76,28 @@ const page = () => {
       />
       <Story
         title="Redesigning Brand Identity, Digital Infrastructure Development (Website)"
-        challenge="Delivered Services"
+        challengeColor="text-[#009c47]"
         text='The food brand "Rashak" which has emerged from within a large and renowned “Seity” brand, is engaged in the procurement of raw materials and spices for major players in the food industry. In the year 1401 (2022/2023), with the development of its management structure and the entry of the third generation of managers into this organization, a redesign of the visual identity was undertaken as part of a new brand development document. Additionally, digital infrastructure (a website) was created, and the first phase of SEO was initiated. The outputs of this project, after 13 months of activity, included a redesign of the visual identity, the design and delivery of complete stationery items, the design and implementation of a new website with the capability for pre-order registration, and the initiation of the brand&apos;s initial SEO phase.'
         imageSrc="/rashak/story1.jpg"
         width="100%"
         bg="sm:py-16"
       />
       {/* <VideoPlayer /> */}
-
+      <Images
+        title="Brand"
+        title2="Personality"
+        imageSrc="/rashak/personality.png"
+        p=" sm:py-10"
+        titleColor="text-[#009c47]"
+      />
+      <Images
+        title="Brand"
+        title2="Archetype"
+        imageSrc="/rashak/arch.png"
+        p="mb-16 sm:py-10"
+        titleColor="text-[#009c47]"
+        width="sm:w-3/4 lg:w-1/2  "
+      />
       <Packaging
         headingText={customHeading}
         imageSources={customImageSources}
@@ -97,42 +111,57 @@ const page = () => {
       <Morph
         beforeImageSrc="/rashak/morph/1.jpg"
         afterImageSrc="/rashak/morph/2.jpg"
-        title="LOGO DESIGN"
+        title="Logo "
+        title2="Design"
+        titleColor="text-[#009c47]"
       />
 
       <Images
-        title="SIGN DESIGN"
-        width="900"
+        title="Sign"
+        title2="Design"
         imageSrc="/rashak/story4.png"
-        bg="sm:py-16"
+        p="mb-16 py-8 sm:py-20"
+        width="w-2/3"
+        titleColor="text-[#009c47]"
       />
       <Images
-        title="LOGO IDEAS"
+        title="Logo"
+        title2=" Ideas"
         textColor="text-black"
-        bg="bg-[#fff] sm:py-16 "
+        bg="bg-[#fff]"
+        p="mb-16 sm:py-10"
         imageSrc="/rashak/story5.png"
-        width="900"
+        // width="w-3/4"
+        titleColor="text-[#009c47]"
       />
-      <Pallete />
+      <Pallete src="/rashak/pallete.jpg" titleColor="text-[#009c47]" />
       <Pattern title="PATTERNS" imageSources={customImageSources3} />
       <Images
-        title="ICON DESIGN"
+        title="Icon"
+        title2="Design"
+        titleColor="text-[#009c47]"
         imageSrc="/rashak/icon.png"
-        bg="bg-[#fff] sm:py-16 "
-        textColor="text-black"
-        width="900"
-      />
-      <Images
-        title="UI/UX Design"
-        imageSrc="/rashak/ui.jpg"
         bg="bg-[#fff]"
         textColor="text-black"
+        width="w-4/5"
+        p=" sm:py-16 mb-8"
       />
-
       <Images
-        title="UI DESIGN SYSTEM"
+        title="UI/UX"
+        title2="Design"
+        titleColor="text-[#009c47]"
+        imageSrc="/rashak/ui.jpg"
+        bg="bg-[#fff] pb-8 "
+        textColor="text-black"
+      />
+      <Images imageSrc="/rashak/morph/3.jpg" bg="bg-[#fff] pb-8 " />
+      <Images imageSrc="/rashak/morph/4.jpg" bg="bg-[#fff] pb-8 " />
+      <Images
+        title="UI"
+        title2="DESIGN SYSTEM"
+        titleColor="text-[#009c47]"
         imageSrc="/rashak/uids.jpg"
-        bg="bg-[#fff] sm:pb-8 "
+        bg="bg-[#fff] pb-8 lg:py-12"
         textColor="text-black"
       />
     </main>

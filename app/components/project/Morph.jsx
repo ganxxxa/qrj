@@ -4,7 +4,13 @@ import React, { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
-const Morph = ({ beforeImageSrc, afterImageSrc, title }) => {
+const Morph = ({
+  beforeImageSrc,
+  afterImageSrc,
+  title,
+  titleColor,
+  title2,
+}) => {
   gsap.registerPlugin(ScrollTrigger);
 
   const sectionRef = useRef(null);
@@ -12,14 +18,13 @@ const Morph = ({ beforeImageSrc, afterImageSrc, title }) => {
   const imgRef = useRef(null);
 
   useLayoutEffect(() => {
-    console.log(containerRef);
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top top",
-        end: "bottom bottom",
+        start: "center center+=100",
+        end: "+=100",
         scrub: 1.4,
-        pin: true,
+        // pin: true,
       },
     });
 
@@ -33,10 +38,17 @@ const Morph = ({ beforeImageSrc, afterImageSrc, title }) => {
   }, []);
 
   return (
-    <main className="h-[130vh] bg-white">
-      <div ref={containerRef} className="h-[130vh] w-screen overflow-hidden">
-        <section ref={sectionRef} className="h-full relative">
-          <div className="absolute top-0 max-h-screen flex items-center scale-90 justify-center ">
+    <main className=" bg-white">
+      <div ref={containerRef} className=" w-screen overflow-hidden">
+        <section
+          ref={sectionRef}
+          className="relative  h-[40vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]"
+        >
+          <h1 className="text-xl sm:text-4xl mt-12 sm:mt-16 lg:mt-20 px-10 sm:px-24 lg:text-5xl 2xl:text-6xl text-black font-bold w-screen sm:absolute z-40">
+            {title}
+            <span className={`${titleColor}`}>{title2}</span>
+          </h1>
+          <div className="absolute top-0  h-full flex items-center   justify-center ">
             <img
               className="w-screen h-fit max-h-screen"
               src={beforeImageSrc}
@@ -45,7 +57,7 @@ const Morph = ({ beforeImageSrc, afterImageSrc, title }) => {
           </div>
           <div
             ref={imgRef}
-            className="absolute translate-x-full h-screen flex items-center justify-center overflow-hidden top-0"
+            className="absolute translate-x-full h-full flex items-center justify-center overflow-hidden top-0"
           >
             <img
               className="w-screen h-fit max-h-screen -translate-x-full"
@@ -53,9 +65,6 @@ const Morph = ({ beforeImageSrc, afterImageSrc, title }) => {
               alt="after"
             />
           </div>
-          <h1 className="aboslute lg:text-5xl 2xl:text-6xl text-black font-bold translate-y-40 lg:translate-x-32 2xl:translate-x-56 z-50">
-            {title}
-          </h1>
         </section>
       </div>
     </main>

@@ -59,14 +59,14 @@ const Packaging = ({ headingText, imageSources, backgroundColor }) => {
   return (
     <section className={`scroll-section-outer  ${backgroundColor}`}>
       <div
-        className={`flex flex-col items-start justify-around py-16 w-screen`}
+        className={`flex flex-col items-start justify-around py-10 sm:py-16 w-screen`}
       >
         <h3 className="px-10 sm:px-16 lg:px-28 lg:text-5lx py-8 text-xl sm:text-2xl md:text-4xl lg:text-5lx xl:text-6xl">
           {headingText}
         </h3>
         <div
           ref={scrollContainerRef}
-          className="relative px-10 sm:px-16 lg:px-28 md:pt-16 flex lg:gap-12 md:gap-8 gap-6 2xl:gap-24 overflow-x-scroll"
+          className="relative px-10 sm:px-16 lg:px-24 md:pt-10 flex lg:gap-12 md:gap-8 gap-6 2xl:gap-24 overflow-x-scroll"
           onScroll={handleScroll}
         >
           {imageSources.map((src, index) => (
@@ -76,13 +76,13 @@ const Packaging = ({ headingText, imageSources, backgroundColor }) => {
             >
               <div className=" translate-y-1 absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black to-100% opacity-70"></div>
               <img
-                className="rounded-lg  w-[180px] sm:w-[240px] md:w-[320px] lg:w-[400px] 2xl:w-[480px]"
+                className="rounded-lg  scale-110  blur-[0.5px] transition duration-1000   hover:scale-100  hover:blur-0 w-[260px] sm:w-[340px] md:w-[420px] lg:w-[500px] 2xl:w-[580px]"
                 src={src}
                 alt={`Image ${index}`}
               />
 
               <img
-                className="absolute left-4 bottom-4 cursor-pointer px-2 py-1 rounded"
+                className="absolute left-0 bottom-0 sm:left-4 sm:bottom-4 cursor-pointer sm:px-2 sm:py-1 scale-50 sm:scale-75 rounded"
                 onClick={() => toggleFullscreen(src, index)}
                 src="/arrows-expand.svg"
               />
@@ -123,7 +123,9 @@ const Packaging = ({ headingText, imageSources, backgroundColor }) => {
               setCurrentImageIndex(index);
             }}
             className={`w-3 h-3 rounded-full mx-2 ${
-              currentImageIndex === index ? "bg-blue-500" : "bg-gray-300"
+              currentImageIndex === index
+                ? "bg-gray-500 "
+                : "bg-gray-500 opacity-90"
             } cursor-pointer`}
           />
         ))}
