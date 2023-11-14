@@ -9,6 +9,7 @@ import Pattern from "../../components/project/pattern/Pattern";
 
 import Morph from "../../components/project/Morph";
 import Images from "@/app/components/project/Images";
+import Social from "@/app/components/project/Social";
 
 const page = () => {
   const customHeading = "Packaging";
@@ -19,8 +20,6 @@ const page = () => {
     "/maple/packaging/4.jpg",
     "/maple/packaging/5.jpg",
   ];
-
-  const customHeading2 = "Interior Design";
 
   const customImageSources2 = [
     "/maple/interior/1.jpg",
@@ -39,9 +38,24 @@ const page = () => {
         color="text-[#EB8B33]"
         colorbg="bg-[#EB8B33]"
       />
+      <Images
+        title="Brand"
+        title2="Personality"
+        imageSrc="/maple/personality.png"
+        p=" sm:py-10"
+        titleColor="text-[#EB8B33]"
+      />
+      <Images
+        title="Brand"
+        title2="Archetype"
+        imageSrc="/maple/arch.png"
+        p="mb-16 sm:py-10"
+        titleColor="text-[#EB8B33]"
+        width="sm:w-3/4 lg:w-1/2  "
+      />{" "}
       <Story
         title="Branding Development"
-        challenge="Delivered Services"
+        challengeColor="text-[#EB8B33]"
         text="In 2019, with the creation of the brand 'Meeple Mania,' the management of this project focused on the areas of visual identity, website design and implementation, and the design and implementation of a biscuit packaging line. After 8 months of activity, the project's output included the development of a comprehensive brand identity document, the design and implementation of a biscuit packaging line featuring 12 characters, and the preparation of the brand's website."
         imageSrc="/maple/story1.jpg"
         bg="sm:py-16"
@@ -52,16 +66,17 @@ const page = () => {
         imageSources={customImageSources}
         backgroundColor={customBackgroundColor}
       />
-      <Images
-        title="SOCIAL MEDIA DESIGN"
-        imageSrc="/maple/story4.jpg"
-        bg="sm:py-16 bg-[#fff]"
-        textColor="text-black"
+      <Social
+        img1="/maple/social/1.jpg"
+        img2="/maple/social/2.jpg"
+        textColor="text-[#EB8B33]"
       />
       <Packaging
-        headingText={customHeading2}
+        headingText="Interior"
+        headingText2="Design"
+        headingTextColor="text-[#EB8B33]"
         imageSources={customImageSources2}
-        backgroundColor={customBackgroundColor}
+        backgroundColor="bg-black text-[#fff] font-semibold"
       />
     </main>
   );

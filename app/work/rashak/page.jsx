@@ -89,7 +89,7 @@ const page = () => {
         p="mb-16 sm:py-10"
         titleColor="text-[#009c47]"
         width="sm:w-3/4 lg:w-1/2  "
-      />{" "}
+      />
       <Story
         title="Redesigning Brand Identity, Digital Infrastructure Development (Website)"
         challengeColor="text-[#009c47]"

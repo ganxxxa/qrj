@@ -4,7 +4,14 @@ import React, { useState, useLayoutEffect, useRef } from "react";
 import { FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion components
 
-const Packaging = ({ headingText, imageSources, backgroundColor, width }) => {
+const Packaging = ({
+  headingText,
+  imageSources,
+  backgroundColor,
+  headingText2,
+  headingTextColor,
+  width,
+}) => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -63,6 +70,7 @@ const Packaging = ({ headingText, imageSources, backgroundColor, width }) => {
       >
         <h3 className="px-10 sm:px-16 lg:px-28 py-8 text-2xl sm:text-4xl lg:text-5xl 2xl:text-6xl">
           {headingText}
+          <span className={`${headingTextColor}`}> {headingText2}</span>
         </h3>
         <div
           ref={scrollContainerRef}
