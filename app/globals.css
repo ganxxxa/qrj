@@ -117,6 +117,27 @@ body {
     rgb(255, 255, 255) 1.41734px -1.41108px 0px,
     rgb(255, 255, 255) 1.92034px -0.558831px 0px;
 }
+.rotatee {
+  animation: rotation 8s infinite linear; /* Adjusted total duration to include the 3s rotation and 1s pause */
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  47% {
+    transform: rotate(0deg); /* Pause for the first 25% of the animation */
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  97% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
 .slide-in {
   position: absolute;

@@ -1,5 +1,5 @@
 "use client";
-import Lenis from "@studio-freight/lenis";
+// import Lenis from "@studio-freight/lenis";
 import ScrollAnimation from "./components/FadeInOutScroll";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -8,7 +8,7 @@ import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
 import { useLayoutEffect, useState, useEffect } from "react";
 import gsap from "gsap";
-
+import "./style/index.scss";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { AnimatePresence, motion } from "framer-motion";
 
