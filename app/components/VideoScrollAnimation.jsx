@@ -1,18 +1,55 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+// import Lenis from "@studio-freight/lenis";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import SplitText from "../utils/split.min.js";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function VideoScrollAnimation() {
   const videoRef = useRef(null);
   const sectionRef = useRef(null);
+  const textRef = useRef(null);
+  const textRef2 = useRef(null);
   // const scrollSectionRef = useRef(null);
+  // useLayoutEffect(() => {
+  //   const lenis = new Lenis({
+  //     lerp: 0.05,
+  //     smoothTouch: true,
+  //     easing: "easeInCubic",
+  //   });
 
-  useEffect(() => {
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   lenis.on("scroll", ScrollTrigger.update);
+
+  //   gsap.ticker.add((time) => {
+  //     lenis.raf(time * 1000);
+  //   });
+
+  //   gsap.ticker.lagSmoothing(0);
+  //   requestAnimationFrame(raf);
+  // }, []);
+
+  useLayoutEffect(() => {
+    const oddChildren = Array.from(textRef.current.children).filter(
+      (_, index) => index % 2 == 0
+    );
+
     const video = videoRef.current;
-    // const scrollSection = scrollSectionRef.current;
+    const text = textRef.current;
+    const stroke = text.children[1];
+
+    const split = new SplitText(textRef.current, {
+      type: "chars",
+      wordsClass: "char",
+    });
+    const split2 = new SplitText(textRef2.current, {
+      type: "chars",
+      wordsClass: "char",
+    });
 
     // Pin video at the start of the timeline
     ScrollTrigger.create({
@@ -20,24 +57,49 @@ export default function VideoScrollAnimation() {
       start: "top top",
       end: "bottom bottom",
       pin: video,
-      scrub: 1.2,
+      scrub: 3,
     });
 
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top top", // Animation starts when the top of sectionRef hits the top of the viewport
-        end: "bottom bottom", // Animation ends when the bottom of sectionRef hits the bottom of the viewport
-        scrub: 1.2, // Smooth scrubbing effect
-        markers: true,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1.2,
       },
     });
 
+    ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top top",
+      end: "bottom bottom",
+      pin: text,
+      scrub: 2,
+    });
     // Add animations to the timeline
-    timeline.to(video, { currentTime: video.duration, ease: "power4.In" });
-    // .to(scrollSection, { height: "100%", ease: "none" }, 0);
-    const { duration } = video;
-    console.log(videoRef);
+    setTimeout(() => {
+      timeline
+        .to(video, { currentTime: video.duration, ease: "power4.In" })
+        .from(split.chars, { opacity: 0, duration: 0.01, stagger: 0.002 }, 0.03)
+
+        .to(
+          oddChildren,
+          { color: "#000", duration: 0.03, stagger: 0.0001 },
+          0.155
+        )
+        .to(
+          split2.chars,
+          { color: "#FFF", duration: 0.03, stagger: 0.001 },
+          0.16
+        )
+        .to(
+          split2.chars,
+          { color: "#FFBF00", duration: 0.03, stagger: 0.005 },
+          0.165
+        );
+
+      console.log(stroke);
+    });
     return () => {
       // Kill the ScrollTrigger instances to prevent memory leaks
       timeline.scrollTrigger.kill();
@@ -63,17 +125,30 @@ export default function VideoScrollAnimation() {
     };
   }, []);
   return (
-    <div ref={sectionRef} className="h-[800vh] m-0 p-0 w-screen">
+    <div ref={sectionRef} className="h-[1000vh] relative m-0 p-0 w-screen">
       <div>
         <video
           ref={videoRef}
           className="h-screen w-full object-cover top-0 left-0"
           preload="auto"
-          src="Home_BG.mp4"
+          src="Home.mp4"
         >
           <source></source>
         </video>
         {/* <div ref={scrollSectionRef} className="block"></div> */}
+        <div className="absolute w-screen h-screen top-0 left-0 flex items-center">
+          <div
+            ref={textRef}
+            className="flex flex-col items-start justify-center text-8xl uppercase font-black px-36 text-white"
+          >
+            <span>here</span>
+            <span ref={textRef2} className="age flex gap-6">
+              <h1>we</h1>
+              <h1>shine</h1>
+            </span>
+            <span>your brand</span>
+          </div>
+        </div>
       </div>
     </div>
   );

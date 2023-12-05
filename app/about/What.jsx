@@ -37,24 +37,6 @@ const What = () => {
       },
     });
     setTimeout(() => {
-      // gsap.fromTo(
-      //   split.words,
-      //   { scaleY: 0.6, opacity: 0 },
-      //   {
-      //     opacity: 1,
-      //     scaleY: 1,
-
-      //     duration: 4,
-      //     stagger: 1, // Adjust the stagger value to control the delay between words
-      //     ease: "power4",
-      //     scrollTrigger: {
-      //       trigger: textRef.current, // Trigger the animation on the entire text
-      //       start: "top center+=300",
-      //       end: "bottom bottom-=300",
-      //       scrub: 1.5,
-      //     },
-      //   }
-      // );
       gsap.fromTo(
         splitTitle.chars,
         { opacity: 0, scaleX: 0 },

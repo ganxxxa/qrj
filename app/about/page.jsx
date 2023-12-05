@@ -6,6 +6,7 @@ import Who from "./Who";
 import What from "./What";
 import How from "./How";
 import Members from "./Members";
+import Contact from "../components/Contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,13 +14,12 @@ const Page = () => {
   const mainRef = useRef(null);
   // const imgRef = useRef(null);
   const textRef = useRef(null);
-  const contactRef = useRef(null);
 
   useLayoutEffect(() => {
     const main = mainRef.current;
     // const img = imgRef.current;
     const text = textRef.current;
-    const contact = contactRef.current;
+
     const tl2 = gsap.timeline();
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -79,20 +79,6 @@ const Page = () => {
     //   },
     //   0.6
     // );
-    gsap.from(contactRef.current.children, {
-      scaleY: 0.7,
-      opacity: 0,
-      y: -50,
-      stagger: 0.3,
-
-      scrollTrigger: {
-        trigger: contactRef.current,
-        start: "top center",
-        end: "top center-=200",
-
-        ease: "power4.In",
-      },
-    });
   }, []);
 
   return (
@@ -117,26 +103,7 @@ const Page = () => {
       <What />
       <How />
       <Members />
-      <div
-        className="h-screen w-screen px-4 flex flex-col justify-center gap-10 items-center text-center bg-gray-50 text-black "
-        ref={contactRef}
-      >
-        <h1 className="text-[calc(24px+2vw)]">
-          Let's ignite your brand's potential together!
-        </h1>
-        <h3 className="max-w-5xl text-[calc(24px+1vw)]">
-          Contact us now to spark the flame and make your brand shine like never
-          before.
-        </h3>
-        <div className="flex gap-10 ">
-          <a className="bg-black hover:bg-gray-900 cursor-pointer text-white font-bold text-sm sm:text-base  py-3 px-8  rounded-xl">
-            CONTACT US
-          </a>
-          <a className="bg-black hover:bg-gray-900 cursor-pointer text-white font-bold  text-sm sm:text-base py-3 px-8 rounded-xl ">
-            VIEW WORKS
-          </a>
-        </div>
-      </div>
+      <Contact />
     </main>
   );
 };

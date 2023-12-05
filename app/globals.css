@@ -167,3 +167,27 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.age {
+  -webkit-text-stroke: 3px white;
+  color: transparent;
+  background: linear-gradient(to right, yellow 50%, transparent 50%);
+  background-clip: text;
+}
+
+.y-mandatory {
+  scroll-snap-type: y mandatory;
+}
+
+.panel {
+  scroll-snap-align: start;
+  position: relative;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+.shd {
+  -webkit-box-shadow: inset 200px 200px 300px 2000px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: inset 200px 200px 300px 2000px rgba(0, 0, 0, 0.45);
+  box-shadow: inset 200px 200px 300px 2000px rgba(0, 0, 0, 0.45);
+}
