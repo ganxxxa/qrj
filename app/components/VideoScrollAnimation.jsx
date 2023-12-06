@@ -139,7 +139,7 @@ export default function VideoScrollAnimation() {
         <div className="absolute w-screen h-screen top-0 left-0 flex items-center">
           <div
             ref={textRef}
-            className="flex flex-col items-start justify-center text-8xl uppercase font-black px-36 text-white"
+            className="flex flex-col items-center lg:items-start justify-center w-full text-6xl sm:text-8xl  uppercase font-black lg:px-36 text-white"
           >
             <span>here</span>
             <span ref={textRef2} className="age flex gap-6">

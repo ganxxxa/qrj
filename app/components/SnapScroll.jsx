@@ -12,11 +12,12 @@ const SnapScroll = () => {
     sections.forEach((section, index) => {
       gsap.fromTo(
         section,
-        { backgroundPosition: "-400px -100px", backgroundSize: "180%" },
+        { backgroundPosition: "-500px -100px", backgroundSize: "270%" },
         {
-          backgroundPosition: "-400px 100px",
-          backgroundSize: "200%", // Adjust the percentage based on your preference
+          backgroundPosition: "-500px 100px",
+          backgroundSize: "299%", // Adjust the percentage based on your preference
           ease: "none",
+          stagger: 0.1,
           scrollTrigger: {
             trigger: section,
             start: "top bottom",
@@ -42,12 +43,15 @@ const SnapScroll = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="my-0 h-full w-screen sm:px-24 lg:px-64">
+    <div
+      ref={sectionRef}
+      className="my-0 mx-0 p-0 h-full w-screen overflow-x-hidden sm:px-24 lg:px-64"
+    >
       <section
         className="panel flex flex-col justify-center h-screen shd items-center gap-12 text-center bg-cover bg-center bg-[url('/bra.jpg')]"
         data-scroll
       >
-        <h1 className="uppercase text-6xl font-bold">Branding</h1>
+        <h1 className="uppercase text-5xl sm:text-6xl font-bold">Branding</h1>
         <p
           style={{ textAlignLast: "center" }}
           className="text-justify px-8 sm:px-14 lg:px-20 text-lg"
@@ -65,7 +69,7 @@ const SnapScroll = () => {
         className="panel flex flex-col justify-center h-screen shd items-center gap-12 text-center bg-cover bg-center bg-[url('/mark.jpg')]"
         data-scroll
       >
-        <h1 className="uppercase text-6xl font-bold">Marketing</h1>
+        <h1 className="uppercase text-5xl sm:text-6xl font-bold">Marketing</h1>
         <p
           style={{ textAlignLast: "center" }}
           className="text-justify px-8 text-lg"
@@ -83,7 +87,9 @@ const SnapScroll = () => {
         className="panel flex flex-col justify-center h-screen shd items-center gap-12 text-center bg-cover bg-center bg-[url('/dev.jpg')]"
         data-scroll
       >
-        <h1 className="uppercase text-6xl font-bold">Development</h1>
+        <h1 className="uppercase text-5xl sm:text-6xl font-bold">
+          Development
+        </h1>
         <p
           style={{ textAlignLast: "center" }}
           className="text-justify px-8 text-lg"

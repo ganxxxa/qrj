@@ -33,14 +33,14 @@ const ProjectCard = ({
     >
       <a href={url}>
         <motion.div
-          className="flex flex-col relative max-w-[800px] w-[70vw] rounded-3xl  origin-top h-80 sm:h-96 inset-shadow"
+          className="flex flex-col relative max-w-[800px] max-h-[400px] w-[85vw] lg:w-[65vw] rounded-3xl  origin-top h-[55vw] xl::h-[60vh] inset-shadow"
           style={{
             backgroundColor: color,
             scale,
             top: `calc(-5vh + ${i * 25}px)`,
           }}
         >
-          <h2 className="text-center absolute uppercase first-letter:text-4xl top-[10%] left-1/2 -translate-x-1/2 m-0 text-2xl">
+          <h2 className="text-center absolute uppercase first-letter:text-4xl top-[10%] left-1/2 -translate-x-1/2 m-0 text-xl sm:text-2xl">
             {title}
           </h2>
           <div className="flex h-full mt-12 gap-12">
@@ -70,12 +70,7 @@ const ProjectCard = ({
                 className="w-full h-full"
                 style={{ scale: imageScale }}
               >
-                <Image
-                  className=" object-fit"
-                  fill
-                  src={`${src}`}
-                  alt="image"
-                />
+                <Image className="object-fit" fill src={`${src}`} alt="image" />
               </motion.div>
             </div>
           </div>

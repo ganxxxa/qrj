@@ -19,7 +19,7 @@ export default function CardSection() {
       className="my-[50vh} flex flex-col items-center justify-center"
     >
       <div className="sticky h-screen flex top-0 items-start  ">
-        <h3 className=" translate-y-12 text-4xl font-bold uppercase">
+        <h3 className="translate-y-8 xlj:translate-y-12 text-2xl sm:text-3xl xl:text-4xl font-bold uppercase">
           Projects
         </h3>
       </div>
@@ -39,7 +39,7 @@ export default function CardSection() {
       })}
       <a
         href="/work"
-        className="bg-white px-4 py-2 rounded-lg uppercase -translate-y-12 mb-12 text-black font-bold"
+        className="bg-white px-4 py-2 rounded-lg uppercase -translate-y-4 xl:-translate-y-8 mb-12 text-black font-bold"
       >
         veiw projects
       </a>
