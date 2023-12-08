@@ -78,10 +78,12 @@ export default function VideoScrollAnimation() {
       pin: text,
       scrub: 2,
     });
+    timeline.to(video, { currentTime: video.duration, ease: "power4.In" });
     // Add animations to the timeline
+    console.log("up");
     setTimeout(() => {
       timeline
-        .to(video, { currentTime: video.duration, ease: "power4.In" })
+
         .from(split.chars, { opacity: 0, duration: 0.01, stagger: 0.002 }, 0.03)
 
         .to(
@@ -111,24 +113,24 @@ export default function VideoScrollAnimation() {
       ScrollTrigger.getAll().forEach((instance) => instance.kill());
     };
   }, []);
-  useEffect(() => {
-    const video = videoRef.current;
+  // useEffect(() => {
+  //   const video = videoRef.current;
 
-    video.addEventListener("loadedmetadata", () => {
-      const playbackConst = 500;
-      const scrollSection = sectionRef.current;
-      console.log("scrollSection", videoRef.current.duration);
-      // if (videoRef?.current) {
-      //   scrollSection.style.height =
-      //     Math.floor(duration) * playbackConst + "px";
-      // }
-      setVideoDuration(duration);
-    });
+  //   video.addEventListener("loadedmetadata", () => {
+  //     const playbackConst = 500;
+  //     const scrollSection = sectionRef.current;
+  //     console.log("scrollSection", videoRef.current.duration);
+  //     // if (videoRef?.current) {
+  //     //   scrollSection.style.height =
+  //     //     Math.floor(duration) * playbackConst + "px";
+  //     // }
+  //     setVideoDuration(duration);
+  //   });
 
-    return () => {
-      video.removeEventListener("loadedmetadata", () => {});
-    };
-  }, []);
+  //   return () => {
+  //     video.removeEventListener("loadedmetadata", () => {});
+  //   };
+  // }, []);
   return (
     <div ref={sectionRef} className="h-[1000vh] relative m-0 p-0 w-screen">
       <div>
