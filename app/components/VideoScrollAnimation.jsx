@@ -1,12 +1,14 @@
 "use client";
 // import Lenis from "@studio-freight/lenis";
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "../utils/split.min.js";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function VideoScrollAnimation() {
+  const [videoDuration, setVideoDuration] = useState(null);
+
   const videoRef = useRef(null);
   const sectionRef = useRef(null);
   const textRef = useRef(null);
@@ -88,6 +90,11 @@ export default function VideoScrollAnimation() {
           0.155
         )
         .to(
+          sectionRef.current,
+          { backgroundColor: "#fff", duration: 0.03 },
+          0.158
+        )
+        .to(
           split2.chars,
           { color: "#FFF", duration: 0.03, stagger: 0.001 },
           0.16
@@ -97,8 +104,6 @@ export default function VideoScrollAnimation() {
           { color: "#FFBF00", duration: 0.03, stagger: 0.005 },
           0.165
         );
-
-      console.log(stroke);
     });
     return () => {
       // Kill the ScrollTrigger instances to prevent memory leaks
@@ -117,7 +122,7 @@ export default function VideoScrollAnimation() {
       //   scrollSection.style.height =
       //     Math.floor(duration) * playbackConst + "px";
       // }
-      // Output: video duration in seconds
+      setVideoDuration(duration);
     });
 
     return () => {
@@ -130,10 +135,12 @@ export default function VideoScrollAnimation() {
         <video
           ref={videoRef}
           className="h-screen w-full object-cover top-0 left-0"
-          preload="auto"
-          src="Home.mp4"
+          preload="preload"
+          onLoadedData={() => {
+            setVideoDuration(duration);
+          }}
         >
-          <source></source>
+          <source src="Home.mp4" type="video/mp4"></source>
         </video>
         {/* <div ref={scrollSectionRef} className="block"></div> */}
         <div className="absolute w-screen h-screen top-0 left-0 flex items-center">
