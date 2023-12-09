@@ -76,10 +76,11 @@ export default function VideoScrollAnimation() {
       pin: text,
       scrub: 2,
     });
+    timeline.to(video, { currentTime: video.duration, ease: "power4.In" });
     // Add animations to the timeline
     setTimeout(() => {
       timeline
-        .to(video, { currentTime: video.duration, ease: "power4.In" })
+        // .to(video, { currentTime: video.duration, ease: "power4.In" })
         .from(split.chars, { opacity: 0, duration: 0.01, stagger: 0.002 }, 0.03)
 
         .to(
@@ -132,7 +133,10 @@ export default function VideoScrollAnimation() {
           className="h-screen w-full object-cover top-0 left-0"
           preload="auto"
         >
-          <source src="Home.mp4" type="video/mp4"></source>
+          <source
+            src="https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.mp4"
+            type="video/mp4"
+          ></source>
         </video>
         {/* <div ref={scrollSectionRef} className="block"></div> */}
         <div className="absolute w-screen h-screen top-0 left-0 flex items-center">
