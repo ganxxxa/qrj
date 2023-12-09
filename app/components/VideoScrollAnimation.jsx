@@ -11,27 +11,6 @@ export default function VideoScrollAnimation() {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
   const textRef2 = useRef(null);
-  // const scrollSectionRef = useRef(null);
-  // useLayoutEffect(() => {
-  //   const lenis = new Lenis({
-  //     lerp: 0.05,
-  //     smoothTouch: true,
-  //     easing: "easeInCubic",
-  //   });
-
-  //   function raf(time) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
-  //   lenis.on("scroll", ScrollTrigger.update);
-
-  //   gsap.ticker.add((time) => {
-  //     lenis.raf(time * 1000);
-  //   });
-
-  //   gsap.ticker.lagSmoothing(0);
-  //   requestAnimationFrame(raf);
-  // }, []);
 
   useLayoutEffect(() => {
     const oddChildren = Array.from(textRef.current.children).filter(
@@ -133,10 +112,7 @@ export default function VideoScrollAnimation() {
           className="h-screen w-full object-cover top-0 left-0"
           preload="auto"
         >
-          <source
-            src="https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.mp4"
-            type="video/mp4"
-          ></source>
+          <source src="Home.mp4" type="video/mp4"></source>
         </video>
         {/* <div ref={scrollSectionRef} className="block"></div> */}
         <div className="absolute w-screen h-screen top-0 left-0 flex items-center">
