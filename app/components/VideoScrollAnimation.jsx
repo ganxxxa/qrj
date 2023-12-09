@@ -94,10 +94,7 @@ export default function VideoScrollAnimation() {
           muted
           playsInline
         >
-          <source
-            src="https://svpvodps-vh.akamaized.net/special/spesial/2019/hercules-ulykken/start-1200.mp4"
-            type="video/mp4"
-          />
+          <source src="bg.mp4" type="video/mp4" />
           Your browser does not support HTML video.
         </video>
 
