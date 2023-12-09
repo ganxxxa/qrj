@@ -23,15 +23,10 @@ export default function Vid() {
   }, []);
   return (
     <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
       <div className="box">
-        <video
-          width="400"
-          id="v0"
-          preload="preload"
-          muted
-          playsInline
-          ref={ref}
-        >
+        <video className="w-screen" id="v0" preload="preload" muted ref={ref}>
           <source
             src="https://svpvodps-vh.akamaized.net/special/spesial/2019/hercules-ulykken/start-1200.mp4"
             type="video/mp4"
