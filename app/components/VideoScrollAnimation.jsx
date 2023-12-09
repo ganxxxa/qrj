@@ -1,14 +1,12 @@
 "use client";
 // import Lenis from "@studio-freight/lenis";
-import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "../utils/split.min.js";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function VideoScrollAnimation() {
-  const [videoDuration, setVideoDuration] = useState(null);
-
   const videoRef = useRef(null);
   const sectionRef = useRef(null);
   const textRef = useRef(null);
@@ -78,23 +76,16 @@ export default function VideoScrollAnimation() {
       pin: text,
       scrub: 2,
     });
-    timeline.to(video, { currentTime: video.duration, ease: "power4.In" });
     // Add animations to the timeline
-    console.log("up");
     setTimeout(() => {
       timeline
-
+        .to(video, { currentTime: video.duration, ease: "power4.In" })
         .from(split.chars, { opacity: 0, duration: 0.01, stagger: 0.002 }, 0.03)
 
         .to(
           oddChildren,
           { color: "#000", duration: 0.03, stagger: 0.0001 },
           0.155
-        )
-        .to(
-          sectionRef.current,
-          { backgroundColor: "#fff", duration: 0.03 },
-          0.158
         )
         .to(
           split2.chars,
@@ -106,6 +97,8 @@ export default function VideoScrollAnimation() {
           { color: "#FFBF00", duration: 0.03, stagger: 0.005 },
           0.165
         );
+
+      console.log(stroke);
     });
     return () => {
       // Kill the ScrollTrigger instances to prevent memory leaks
@@ -113,34 +106,31 @@ export default function VideoScrollAnimation() {
       ScrollTrigger.getAll().forEach((instance) => instance.kill());
     };
   }, []);
-  // useEffect(() => {
-  //   const video = videoRef.current;
+  useEffect(() => {
+    const video = videoRef.current;
 
-  //   video.addEventListener("loadedmetadata", () => {
-  //     const playbackConst = 500;
-  //     const scrollSection = sectionRef.current;
-  //     console.log("scrollSection", videoRef.current.duration);
-  //     // if (videoRef?.current) {
-  //     //   scrollSection.style.height =
-  //     //     Math.floor(duration) * playbackConst + "px";
-  //     // }
-  //     setVideoDuration(duration);
-  //   });
+    video.addEventListener("loadedmetadata", () => {
+      const playbackConst = 500;
+      const scrollSection = sectionRef.current;
+      console.log("scrollSection", videoRef.current.duration);
+      // if (videoRef?.current) {
+      //   scrollSection.style.height =
+      //     Math.floor(duration) * playbackConst + "px";
+      // }
+      // Output: video duration in seconds
+    });
 
-  //   return () => {
-  //     video.removeEventListener("loadedmetadata", () => {});
-  //   };
-  // }, []);
+    return () => {
+      video.removeEventListener("loadedmetadata", () => {});
+    };
+  }, []);
   return (
     <div ref={sectionRef} className="h-[1000vh] relative m-0 p-0 w-screen">
       <div>
         <video
           ref={videoRef}
           className="h-screen w-full object-cover top-0 left-0"
-          preload="preload"
-          onLoadedData={() => {
-            setVideoDuration(duration);
-          }}
+          preload="auto"
         >
           <source src="Home.mp4" type="video/mp4"></source>
         </video>
