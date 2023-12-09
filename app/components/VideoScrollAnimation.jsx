@@ -90,11 +90,11 @@ export default function VideoScrollAnimation() {
         <video
           ref={videoRef}
           className="h-screen w-full object-cover top-0 left-0"
-          preload="preload"
+          preload="auto"
           muted
           playsInline
         >
-          <source src="bg.mp4" type="video/mp4" />
+          <source src="bg1.mp4" type="video/mp4" />
           Your browser does not support HTML video.
         </video>
 
