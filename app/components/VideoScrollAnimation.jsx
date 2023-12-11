@@ -34,11 +34,11 @@ export default function VideoScrollAnimation() {
       trigger: sectionRef.current,
       start: "top top",
       end: "bottom bottom",
-      scrub: 1,
+      scrub: 2,
       pin: videoRef.current,
       onUpdate: (self) => {
         videoRef.current.currentTime =
-          videoRef.current.duration * self.progress.toFixed(100) * 0.98;
+          videoRef.current.duration * self.progress.toFixed(100);
       },
     });
 
@@ -67,17 +67,17 @@ export default function VideoScrollAnimation() {
         .to(
           oddChildren,
           { color: "#000", duration: 0.03, stagger: 0.0001 },
-          0.155
+          0.11
         )
         .to(
           split2.chars,
           { color: "#FFF", duration: 0.03, stagger: 0.001 },
-          0.16
+          0.115
         )
         .to(
           split2.chars,
           { color: "#FFBF00", duration: 0.03, stagger: 0.005 },
-          0.165
+          0.116
         );
 
       console.log(stroke);

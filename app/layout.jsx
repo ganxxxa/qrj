@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     width = window.innerWidth;
   } else {
     // Handle the case when window is undefined
-    width = 0; // or any default value you prefer
+    width = 0;
   }
   const [windowWidth, setWindowWidth] = useState(width);
   const refreshPage = () => {
@@ -28,10 +28,8 @@ export default function RootLayout({ children }) {
 
   // Check window width on resize
   const checkWindowWidth = () => {
-    // Update the state with the current window width
     setWindowWidth(window.innerWidth);
 
-    // Check if the window width is less than the threshold and not equal to the state
     if (window.innerWidth != windowWidth) {
       refreshPage();
     }
@@ -40,11 +38,10 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     window.addEventListener("resize", checkWindowWidth);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", checkWindowWidth);
     };
-  }, [windowWidth]); // Include windowWidth in the dependency array to ensure the effect runs on windowWidth change
+  }, [windowWidth]);
 
   return (
     <html>

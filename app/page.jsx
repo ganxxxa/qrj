@@ -16,8 +16,8 @@ export default function Home() {
       <Hero />
       {/* <Vid /> */}
       <VideoScrollAnimation />
-      {/* <CardSection />
-      <SnapScroll /> */}
+      <CardSection />
+      <SnapScroll />
       <Contact />
     </main>
   );
