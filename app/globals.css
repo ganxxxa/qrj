@@ -170,7 +170,6 @@ body {
 .age {
   -webkit-text-stroke: 3px white;
   color: transparent;
-  background: linear-gradient(to right, yellow 50%, transparent 50%);
   background-clip: text;
 }
 

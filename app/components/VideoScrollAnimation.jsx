@@ -34,7 +34,7 @@ export default function VideoScrollAnimation() {
       trigger: sectionRef.current,
       start: "top top",
       end: "bottom bottom",
-      scrub: 2,
+      scrub: 1.5,
       pin: videoRef.current,
       onUpdate: (self) => {
         videoRef.current.currentTime =
