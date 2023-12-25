@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
@@ -12,7 +13,12 @@ const Hero = () => {
         </div>
         <div className="w-full flex justify-center  sm:justify-start">
           <span className="scale-50">
-            <img className="rotatee" src="/home.svg" />
+            <Image
+              width={160}
+              height={160}
+              className="rotatee"
+              src="/home.svg"
+            />
           </span>
         </div>
       </div>

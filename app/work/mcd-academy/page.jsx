@@ -1,14 +1,15 @@
 "use client";
 import React from "react";
 import Intro from "../../components/project/Intro";
-import Packaging from "../../components/project/Packaging";
 import { VideoPlayer } from "../../components/project/VideoPlayer";
 import Story from "../../components/project/Story";
-import Pallete from "../../components/project/pallete/Pallete";
-import Pattern from "../../components/project/pattern/Pattern";
-
-import Morph from "../../components/project/Morph";
 import Images from "@/app/components/project/Images";
+import pers from "@/public/mcd/personality.png";
+import arch from "@/public/mcd/arch.png";
+import story1 from "@/public/mcd/story1.jpg";
+import ux from "@/public/mcd/3.jpg";
+import ux1 from "@/public/mcd/4.jpg";
+import uids from "@/public/mcd/uids.jpg";
 
 const page = () => {
   return (
@@ -26,14 +27,14 @@ const page = () => {
       <Images
         title="Brand"
         title2="Personality"
-        imageSrc="/mcd/personality.png"
+        imageSrc={pers}
         p=" sm:py-10"
         titleColor="text-[#67B8E5]"
       />
       <Images
         title="Brand"
         title2="Archetype"
-        imageSrc="/mcd/arch.png"
+        imageSrc={arch}
         p="mb-16 sm:py-10"
         titleColor="text-[#67B8E5]"
         width="sm:w-3/4 lg:w-1/2  "
@@ -44,7 +45,7 @@ const page = () => {
         challengeColor="text-[#67B8E5]"
         text={`In the year 2022, with the development of a business strategy by Majidico Academy for a serious presence in the Iranian market, Garage Digital Studio partnered as the execution arm alongside the brand to develop the digital infrastructure of this brand on Instagram and its website. Additionally, digital campaigns were designed and executed to generate leads for the brand.
         As a result of this 6-month collaboration in two phases of digital infrastructure development and campaign design and execution, the outputs included the creation of Majidico Academy's Instagram channel, a website for the brand with a dedicated panel for each student, and 3 digital campaigns that generated over 2000 leads for the brand.`}
-        imageSrc="/mcd/story1.jpg"
+        imageSrc={story1}
         width="100%"
         bg="sm:py-16"
       />{" "}
@@ -52,18 +53,17 @@ const page = () => {
         title="UI/UX"
         title2="Design"
         titleColor="text-[#223E83]"
-        imageSrc="/mcd/3.jpg"
+        imageSrc={ux}
         bg="bg-[#f6f6f6]"
         textColor="text-black"
-        width="sm:w-4/5"
       />
-      <Images imageSrc="/mcd/4.jpg" width="sm:w-4/5" bg="bg-[#f6f6f6] pb-16" />
+      <Images imageSrc={ux1} bg="bg-[#f6f6f6]" />
       <Images
         title="UI"
         title2="DESIGN SYSTEM"
         titleColor="text-[#223E83]"
-        imageSrc="/mcd/uids.jpg"
-        bg="bg-[#f6f6f6] pb-8 lg:py-12"
+        imageSrc={uids}
+        bg="bg-[#f6f6f6] pb-8"
         textColor="text-black"
       />
     </main>

@@ -63,21 +63,20 @@ export default function VideoScrollAnimation() {
       timeline
 
         .from(split.chars, { opacity: 0, duration: 0.01, stagger: 0.002 }, 0.03)
-
-        .to(
-          oddChildren,
-          { color: "#000", duration: 0.03, stagger: 0.0001 },
-          0.11
-        )
         .to(
           split2.chars,
-          { color: "#FFF", duration: 0.03, stagger: 0.001 },
-          0.115
+          { color: "#FFF", duration: 0.03, stagger: 0.005 },
+          0.1
         )
         .to(
           split2.chars,
           { color: "#FFBF00", duration: 0.03, stagger: 0.005 },
-          0.116
+          0.1001
+        )
+        .to(
+          oddChildren,
+          { color: "#000", duration: 0.03, stagger: 0.0001 },
+          0.11
         );
 
       console.log(stroke);

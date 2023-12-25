@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Story = ({
@@ -26,7 +27,14 @@ const Story = ({
         {text}
       </p>
       <div className="py-8 mb-8 flex justify-center w-fit self-center max-h-screen md:max-h-[80vh]">
-        <img width={width} src={imageSrc} alt="Story" />
+        <div className="relative">
+          <Image
+            className="object-fit"
+            width={width}
+            src={imageSrc}
+            alt="Story"
+          />
+        </div>
       </div>
     </section>
   );

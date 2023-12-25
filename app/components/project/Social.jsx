@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Social = ({ link, img2, img1, bg, textColor }) => {
@@ -13,7 +14,9 @@ const Social = ({ link, img2, img1, bg, textColor }) => {
 
       <div className="py-8 mb-8 flex flex-col-reverse  sm:flex-row justify-center gap-10 h-full w-full sm:w-5/6">
         <div className="flex flex-col gap-12 items-center">
-          <img src={img1} />
+          <div className="relative">
+            <Image src={img1} />
+          </div>
           <div className="h-full flex items-center text-white">
             <a
               href={link}
@@ -24,7 +27,7 @@ const Social = ({ link, img2, img1, bg, textColor }) => {
           </div>
         </div>
         <div>
-          <img src={img2} />
+          <Image src={img2} />
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import React, { useState, useLayoutEffect, useRef } from "react";
 import { FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion components
+import Image from "next/image";
 
 const Packaging = ({
   headingText,
@@ -83,13 +84,15 @@ const Packaging = ({
               className={`relative rounded-lg overflow-hidden flex-shrink-0 ${width}`}
             >
               <div className=" translate-y-1 absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black to-100% opacity-70"></div>
-              <img
-                className="rounded-lg  scale-110  blur-[0.5px] transition duration-1000   hover:scale-100  hover:blur-0 w-[260px] sm:w-[340px] md:w-[420px] lg:w-[500px] 2xl:w-[580px]"
+              <Image
+                className="rounded-lg  scale-110  blur-[0.5px] transition duration-1000 sc hover:scale-105  hover:blur-0 w-[260px] sm:w-[340px] md:w-[420px] lg:w-[500px] 2xl:w-[580px]"
                 src={src}
                 alt={`Image ${index}`}
               />
 
-              <img
+              <Image
+                width={64}
+                height={64}
                 className="absolute left-0 bottom-0 sm:left-4 sm:bottom-4 cursor-pointer sm:px-2 sm:py-1 scale-50 sm:scale-75 rounded"
                 onClick={() => toggleFullscreen(src, index)}
                 src="/arrows-expand.svg"

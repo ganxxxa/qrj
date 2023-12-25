@@ -2,6 +2,7 @@ import React, { useRef, useLayoutEffect } from "react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
 
 const Proto = ({ imageSources, title, bg }) => {
   const sectionRef = useRef(null);
@@ -51,7 +52,7 @@ const Proto = ({ imageSources, title, bg }) => {
         <div ref={sectionRef} className="flex flex-grow">
           {imageSources.map((src, index) => (
             <div className="h-screen  flex-shrink-0">
-              <img
+              <Image
                 className="rounded-none h-full  object-cover"
                 src={src}
                 key={index}

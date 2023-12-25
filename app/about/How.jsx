@@ -76,7 +76,7 @@ const How = () => {
           WE DO IT
         </h1>
       </span>
-      {/* <img src="/how.svg" className="w-screen" /> */}
+
       <p
         ref={textRef}
         className="2xl:text-[2vw] lg:text-[2.3vw] sm:text-[3.3vw] text-[3.8vw] font-normal text-justify tracking-wide pt-4 leading-relaxed"

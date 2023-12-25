@@ -86,13 +86,6 @@ const Page = () => {
       className="flex sm:px-10 md:px-16 min-h-screen flex-col items-center justify-between py-24 overflow-x-hidden bg-black"
       ref={mainRef}
     >
-      {/* <div ref={imgRef} className="relative w-screen h-screen">
-        <img
-          src="/logo-black.svg"
-          alt=""
-          className="z-20 absolute top-1/2 left-1/2 w-1/3 xl:w-[calc(25vh+25vw)] -translate-y-1/2 -translate-x-1/2"
-        />
-      </div> */}
       <div ref={textRef} className="relative w-screen h-[150vh]">
         <h1 className="absolute top-1/3 left-1/2 -translate-y-full -translate-x-1/2 uppercase whitespace-nowrap text-[7vw] sm:text-5xl lg:text-6xl  2xl:text-[3.8vw] text-slate-100 font-bold ">
           About garage

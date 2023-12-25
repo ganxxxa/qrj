@@ -4,29 +4,28 @@ import Intro from "../../components/project/Intro";
 import Packaging from "../../components/project/Packaging";
 import { VideoPlayer } from "../../components/project/VideoPlayer";
 import Story from "../../components/project/Story";
-import Pallete from "../../components/project/pallete/Pallete";
-import Pattern from "../../components/project/pattern/Pattern";
-
-import Morph from "../../components/project/Morph";
 import Images from "@/app/components/project/Images";
 import Social from "@/app/components/project/Social";
+import pack1 from "@/public/bahar/posts/1.jpg";
+import pack2 from "@/public/bahar/posts/2.jpg";
+import pack3 from "@/public/bahar/posts/3.jpg";
+import pack4 from "@/public/bahar/posts/4.jpg";
+import pack5 from "@/public/bahar/reels/1.jpg";
+import pack6 from "@/public/bahar/reels/1.jpg";
+import pack7 from "@/public/bahar/reels/1.jpg";
+import pers from "@/public/bahar/personality.png";
+import arch from "@/public/bahar/arch.png";
+import story1 from "@/public/bahar/story1.jpg";
+import social1 from "@/public/bahar/social/1.jpg";
+import social2 from "@/public/bahar/social/2.jpg";
 
 const page = () => {
   const customHeading = "Instagram Posts";
-  const customImageSources = [
-    "/bahar/posts/1.jpg",
-    "/bahar/posts/2.jpg",
-    "/bahar/posts/3.jpg",
-    "/bahar/posts/4.jpg",
-  ];
+  const customImageSources = [pack1, pack2, pack3, pack4];
 
   const customHeading3 = "Instagram Reels";
 
-  const customImageSources3 = [
-    "/bahar/reels/1.jpg",
-    "/bahar/reels/1.jpg",
-    "/bahar/reels/1.jpg",
-  ];
+  const customImageSources3 = [pack5, pack6, pack7];
 
   const customBackgroundColor = "bg-[#fff] text-black font-semibold";
 
@@ -43,17 +42,17 @@ const page = () => {
       <Images
         title="Brand"
         title2="Personality"
-        imageSrc="/bahar/personality.png"
+        imageSrc={pers}
         p=" sm:py-10"
         titleColor="text-[#FFBA3A]"
       />
       <Images
         title="Brand"
         title2="Archetype"
-        imageSrc="/bahar/arch.png"
+        imageSrc={arch}
         p="mb-16 sm:py-10"
         titleColor="text-[#FFBA3A]"
-        width="sm:w-3/4 lg:w-1/2  "
+        width="w-3/4 lg:w-3/5"
       />
       <Story
         title="Digital Infrastructure Development (Instagram),
@@ -61,14 +60,10 @@ const page = () => {
         challengeColor="text-[#FFBA3A]"
         text="In the year 2022, with the development of the brand strategy for Garage in line with expanding its international portfolio, the project to develop all marketing channels in Iran for the brand 'bahar TAMAM' was initiated. 'bahar TAMAM' is a market leader in the Middle East in the field of student admissions to universities in first-world countries and providing facilities to active students. This move was aimed at expanding its regional markets.
         In this project, all online channels of this organization were activated in the first phase, followed by the activation of offline channels in the second phase. A marketing and sales team was established in Tehran for this brand. The output of this project, after 12 months of activity, included the establishment of a permanent sales and marketing team, the creation of all online infrastructure including social networks, websites, etc., the development of automated online and offline advertising processes, and achieving sales in the Iranian market."
-        imageSrc="/bahar/story1.jpg"
+        imageSrc={story1}
       />
       {/* <VideoPlayer /> */}
-      <Social
-        img1="/bahar/social/1.jpg"
-        img2="/bahar/social/2.jpg"
-        textColor="text-[#FFBA3A]"
-      />
+      <Social img1={social1} img2={social2} textColor="text-[#FFBA3A]" />
       <Packaging
         width="w-2/5"
         headingText={customHeading}

@@ -4,28 +4,27 @@ import Intro from "../../components/project/Intro";
 import Packaging from "../../components/project/Packaging";
 import { VideoPlayer } from "../../components/project/VideoPlayer";
 import Story from "../../components/project/Story";
-import Pallete from "../../components/project/pallete/Pallete";
-import Pattern from "../../components/project/pattern/Pattern";
-
-import Morph from "../../components/project/Morph";
+import pack1 from "@/public/maple/packaging/1.jpg";
+import pack2 from "@/public/maple/packaging/2.jpg";
+import pack3 from "@/public/maple/packaging/3.jpg";
+import pack4 from "@/public/maple/packaging/4.jpg";
+import pack5 from "@/public/maple/packaging/5.jpg";
+import pack6 from "@/public/maple/interior/1.jpg";
+import pack7 from "@/public/maple/interior/2.jpg";
+import pack8 from "@/public/maple/interior/3.jpg";
+import pers from "@/public/maple/personality.png";
+import arch from "@/public/maple/arch.png";
+import so1 from "@/public/maple/social/1.jpg";
+import so2 from "@/public/maple/social/2.jpg";
+import story1 from "@/public/maple/story1.jpg";
 import Images from "@/app/components/project/Images";
 import Social from "@/app/components/project/Social";
 
 const page = () => {
   const customHeading = "Packaging";
-  const customImageSources = [
-    "/maple/packaging/1.jpg",
-    "/maple/packaging/2.jpg",
-    "/maple/packaging/3.jpg",
-    "/maple/packaging/4.jpg",
-    "/maple/packaging/5.jpg",
-  ];
+  const customImageSources = [pack1, pack2, pack3, pack4, pack5];
 
-  const customImageSources2 = [
-    "/maple/interior/1.jpg",
-    "/maple/interior/2.jpg",
-    "/maple/interior/3.jpg",
-  ];
+  const customImageSources2 = [pack6, pack7, pack8];
 
   const customBackgroundColor = "bg-[#fff] text-black font-semibold";
 
@@ -41,14 +40,14 @@ const page = () => {
       <Images
         title="Brand"
         title2="Personality"
-        imageSrc="/maple/personality.png"
+        imageSrc={pers}
         p=" sm:py-10"
         titleColor="text-[#EB8B33]"
       />
       <Images
         title="Brand"
         title2="Archetype"
-        imageSrc="/maple/arch.png"
+        imageSrc={arch}
         p="mb-16 sm:py-10"
         titleColor="text-[#EB8B33]"
         width="sm:w-3/4 lg:w-1/2  "
@@ -57,7 +56,7 @@ const page = () => {
         title="Branding Development"
         challengeColor="text-[#EB8B33]"
         text="In 2019, with the creation of the brand 'Meeple Mania,' the management of this project focused on the areas of visual identity, website design and implementation, and the design and implementation of a biscuit packaging line. After 8 months of activity, the project's output included the development of a comprehensive brand identity document, the design and implementation of a biscuit packaging line featuring 12 characters, and the preparation of the brand's website."
-        imageSrc="/maple/story1.jpg"
+        imageSrc={story1}
         bg="sm:py-16"
       />
       {/* <VideoPlayer /> */}
@@ -66,11 +65,7 @@ const page = () => {
         imageSources={customImageSources}
         backgroundColor={customBackgroundColor}
       />
-      <Social
-        img1="/maple/social/1.jpg"
-        img2="/maple/social/2.jpg"
-        textColor="text-[#EB8B33]"
-      />
+      <Social img1={so1} img2={so2} textColor="text-[#EB8B33]" />
       <Packaging
         headingText="Interior"
         headingText2="Design"

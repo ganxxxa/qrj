@@ -3,6 +3,7 @@ import React, { useRef, useLayoutEffect } from "react";
 // import "./style.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import Image from "next/image";
 
 const Morph = ({
   beforeImageSrc,
@@ -48,15 +49,15 @@ const Morph = ({
             {title}
             <span className={`${titleColor}`}>{title2}</span>
           </h1>
-          <div className="absolute top-0  h-full flex items-center   justify-center ">
-            <img className="w-screen  " src={beforeImageSrc} alt="before" />
+          <div className="absolute top-0 w-screen h-full flex items-center   justify-center ">
+            <Image className="w-full" src={beforeImageSrc} alt="before" />
           </div>
           <div
             ref={imgRef}
-            className="absolute translate-x-full h-full flex items-center justify-center overflow-hidden top-0"
+            className="absolute w-screen translate-x-full h-full flex items-center justify-center overflow-hidden top-0"
           >
-            <img
-              className="w-screen   -translate-x-full"
+            <Image
+              className="w-full -translate-x-full"
               src={afterImageSrc}
               alt="after"
             />

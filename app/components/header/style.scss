@@ -33,12 +33,11 @@
   transform: rotate(-45deg);
   top: 1px;
 }
-.responsive_nav {
-  transform: translateY(100vh);
-}
 
 @media screen and (max-width: 1024px) {
- 
+  .responsive_nav {
+    transform: translateY(100vh);
+  }
   .menu {
     position: fixed;
     top: -100vh;
@@ -51,4 +50,6 @@
     justify-content: space-around;
 
     background: #1d1d1b;
-    transition: 0.7s;}}
+    transition: 0.7s;
+  }
+}

@@ -2,6 +2,7 @@
 import React, { useLayoutEffect, useState, useRef } from "react";
 import Link from "next/link";
 import "./style.scss";
+import Image from "next/image";
 
 const Header = () => {
   const [windowWidth, setWindowWidth] = useState(null);
@@ -29,22 +30,28 @@ const Header = () => {
   return (
     <nav className="z-40 flex flex-col justify-between py-12 px-4 md:px-28 items-center bg-opacity-50 bg-black absolute top-0 left-0 w-full ">
       <div className="flex justify-between items-center w-full ">
-        <img src="/logo.svg" className="z-50" />
+        <Image width={78} height={72} src="/logo.svg" className="z-50" />
         <div className="flex justify-between gap-32">
-          <div ref={navRef} className={`menu  ${isOpen && "responsive_nav"}`}>
+          <div
+            ref={navRef}
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+            className={`menu  ${isOpen && "responsive_nav"}`}
+          >
             <ul className="flex flex-col lg:flex-row gap-12 items-center lg:justify-end text-lg">
-              <a href="/">home</a>
+              <Link href="/">home</Link>
               <Link href="/work">services</Link>
               <Link href="/work">blog</Link>
-              <a href="/work">work</a>
-              <a href="/about">about us</a>
+              <Link href="/work">work</Link>
+              <Link href="/about">about us</Link>
             </ul>
           </div>
           <div className="flex gap-6 items-center">
             <button className="w-14 h-8 rounded-lg  bg-white text-black">
               EN
             </button>
-            {windowWidth < 1024 && (
+            {windowWidth && windowWidth < 1024 && (
               <span
                 ref={burgerRef}
                 className={`block burger-icon cursor-pointer z-50 ${

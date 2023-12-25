@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 const FadeInOutScroll = ({ sections }) => {
   const sectionRefs = useRef([]);
@@ -48,7 +49,7 @@ const FadeInOutScroll = ({ sections }) => {
           key={index}
           ref={(el) => (sectionRefs.current[index] = el)}
         >
-          <img
+          <Image
             src={section.imgSrc}
             alt={`Section ${index + 1}`}
             className="w-full h-full"

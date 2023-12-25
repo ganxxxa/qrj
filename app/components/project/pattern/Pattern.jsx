@@ -3,6 +3,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import "./style.css";
+import Image from "next/image";
 
 const Pattern = ({ imageSources, title, title1, absolute }) => {
   const sectionRef = useRef(null);
@@ -58,8 +59,11 @@ const Pattern = ({ imageSources, title, title1, absolute }) => {
         </h1>
         <div ref={sectionRef} className="flex flex-grow">
           {imageSources.map((src, index) => (
-            <div key={index} className="h-screen  flex-shrink-0">
-              <img className={`rounded-none h-full  object-cover `} src={src} />
+            <div key={index} className="h-screen relative w-full flex-shrink-0">
+              <Image
+                className={`rounded-none h-full  object-contain `}
+                src={src}
+              />
             </div>
           ))}
         </div>
