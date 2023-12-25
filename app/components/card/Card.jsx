@@ -1,10 +1,11 @@
 import React from "react";
 import "./style.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Card = ({ backgroundColor, title, logo, link, paragraph }) => {
   return (
-    <a href={link}>
+    <Link href={link}>
       <div
         className="blog-card relative  w-full inset-shadow "
         style={{
@@ -22,7 +23,7 @@ const Card = ({ backgroundColor, title, logo, link, paragraph }) => {
           <p>{paragraph}</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

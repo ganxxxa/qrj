@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import "./style.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const [windowWidth, setWindowWidth] = useState(null);
@@ -53,17 +54,17 @@ const Footer = () => {
           </div>
           <ul className="flex flex-col ">
             <h3>MAIN</h3>
-            <a href="/home">
+            <Link href="/home">
               <li>Home</li>
-            </a>
+            </Link>
             <li>Services</li>
             <li>Blog</li>
-            <a href="/work">
+            <Link href="/work">
               <li>Work</li>
-            </a>
-            <a href="/about">
+            </Link>
+            <Link href="/about">
               <li>About Us</li>
-            </a>
+            </Link>
           </ul>
           <ul className="flex flex-col ">
             <h3>SERVICES</h3>

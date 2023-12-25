@@ -4,6 +4,7 @@ import styles from "./style.module.scss";
 import { useTransform, useScroll, motion } from "framer-motion";
 
 import { useRef } from "react";
+import Link from "next/link";
 
 const ProjectCard = ({
   i,
@@ -31,7 +32,7 @@ const ProjectCard = ({
       ref={container}
       className="sticky h-screen flex top-0 items-center justify-center "
     >
-      <a href={url}>
+      <Link href={url}>
         <motion.div
           className="flex flex-col relative max-w-[800px] max-h-[400px] w-[85vw] lg:w-[65vw] rounded-3xl  origin-top h-[55vw] xl::h-[60vh] inset-shadow"
           style={{
@@ -54,7 +55,7 @@ const ProjectCard = ({
             </div>
           </div>
         </motion.div>{" "}
-      </a>
+      </Link>
     </div>
   );
 };

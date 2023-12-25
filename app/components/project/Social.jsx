@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Social = ({ link, img2, img1, bg, textColor }) => {
@@ -18,12 +19,12 @@ const Social = ({ link, img2, img1, bg, textColor }) => {
             <Image src={img1} />
           </div>
           <div className="h-full flex items-center text-white">
-            <a
+            <Link
               href={link}
               className="bg-black cursor-pointer py-2 px-5 rounded-lg"
             >
               visit instagram page
-            </a>
+            </Link>
           </div>
         </div>
         <div>

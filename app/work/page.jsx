@@ -99,39 +99,7 @@ const page = () => {
               title="kitchen baskets Production"
               paragraph=""
             />
-            {/* <Card
-              backgroundImage="/stationary/1.jpg"
-              link="/work/first"
-              title="Food Industry"
-              paragraph="Rashak is a factory that specializes in the production and supply of high-quality spices ..."
-            />
-            <Card
-              backgroundImage="/stationary/1.jpg"
-              link="/work/first"
-              title="Food Industry"
-              paragraph="Rashak is a factory that specializes in the production and supply of high-quality spices ..."
-            /> */}
           </div>
-          {/* <div className="flex flex-col gap-4">
-            <Card
-              backgroundImage="/stationary/1.jpg"
-              link="/work/first"
-              title="Food Industry"
-              paragraph="Rashak is a factory that specializes in the production and supply of high-quality spices ..."
-            />
-            <Card
-              backgroundImage="/stationary/1.jpg"
-              link="/work/first"
-              title="Food Industry"
-              paragraph="Rashak is a factory that specializes in the production and supply of high-quality spices ..."
-            />
-            <Card
-              backgroundImage="/stationary/1.jpg"
-              link="/work/first"
-              title="Food Industry"
-              paragraph="Rashak is a factory that specializes in the production and supply of high-quality spices ..."
-            />
-          </div> */}
         </div>
       </div>
     </main>

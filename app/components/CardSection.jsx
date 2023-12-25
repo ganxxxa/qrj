@@ -4,6 +4,7 @@ import { useScroll } from "framer-motion";
 import { useRef } from "react";
 import { projects } from "../data";
 import ProjectCard from "./ProjectCard";
+import Link from "next/link";
 
 export default function CardSection() {
   const container = useRef(null);
@@ -37,12 +38,12 @@ export default function CardSection() {
           />
         );
       })}
-      <a
+      <Link
         href="/work"
         className="bg-white px-4 py-2 rounded-lg uppercase -translate-y-4 xl:-translate-y-8 mb-12 text-black font-bold"
       >
         veiw projects
-      </a>
+      </Link>
     </main>
   );
 }
