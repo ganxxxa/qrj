@@ -59,9 +59,9 @@ const Pattern = ({ imageSources, title, title1, absolute }) => {
         </h1>
         <div ref={sectionRef} className="flex flex-grow">
           {imageSources.map((src, index) => (
-            <div key={index} className="h-screen relative w-full flex-shrink-0">
+            <div key={index} className="h-screen flex-shrink-0">
               <Image
-                className={`rounded-none h-full  object-contain `}
+                className={`rounded-none h-full w-full object-contain `}
                 src={src}
               />
             </div>
