@@ -63,7 +63,12 @@ const page = () => {
         imageSrc={story1}
       />
       {/* <VideoPlayer /> */}
-      <Social img1={social1} img2={social2} textColor="text-[#FFBA3A]" />
+      <Social
+        img1={social1}
+        img2={social2}
+        link="Instagram.com"
+        textColor="text-[#FFBA3A]"
+      />
       <Packaging
         width="w-2/5"
         headingText={customHeading}

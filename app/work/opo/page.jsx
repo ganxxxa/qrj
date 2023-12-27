@@ -72,7 +72,12 @@ const page = () => {
         bg="sm:py-16"
       />
       {/* <VideoPlayer /> */}
-      <Social img1={so1} img2={so2} textColor="text-[#29A9E1]" />
+      <Social
+        img1={so1}
+        img2={so2}
+        link="Instagram.com"
+        textColor="text-[#29A9E1]"
+      />
       <Packaging
         width="sm:w-2/5"
         headingText={customHeading}

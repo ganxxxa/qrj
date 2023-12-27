@@ -107,7 +107,12 @@ const page = () => {
         bg="bg-[#fff] pb-8 lg:py-12"
         textColor="text-black"
       />
-      <Social img1={so1} img2={so2} textColor="text-[#C1A020]" />
+      <Social
+        link="Instagram.com"
+        img1={so1}
+        img2={so2}
+        textColor="text-[#C1A020]"
+      />
     </main>
   );
 };

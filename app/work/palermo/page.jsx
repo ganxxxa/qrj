@@ -65,7 +65,12 @@ const page = () => {
         imageSrc={story1}
         bg="sm:py-16"
       />
-      <Social img1={so1} img2={so2} textColor="text-[#46B8AF]" />
+      <Social
+        img1={so1}
+        img2={so2}
+        link="Instagram.com"
+        textColor="text-[#46B8AF]"
+      />
       <Packaging
         width="sm:w-2/5"
         headingText={customHeading}

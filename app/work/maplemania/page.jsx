@@ -65,7 +65,12 @@ const page = () => {
         imageSources={customImageSources}
         backgroundColor={customBackgroundColor}
       />
-      <Social img1={so1} img2={so2} textColor="text-[#EB8B33]" />
+      <Social
+        link="Instagram.com"
+        img1={so1}
+        img2={so2}
+        textColor="text-[#EB8B33]"
+      />
       <Packaging
         headingText="Interior"
         headingText2="Design"

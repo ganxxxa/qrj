@@ -94,7 +94,12 @@ const page = () => {
         bg=" bg-[#1F1F42]"
         imageSources={customImageSources3}
       />
-      <Social img1={so1} img2={so2} textColor="text-[#579AFF]" />
+      <Social
+        link="Instagram.com"
+        img1={so1}
+        img2={so2}
+        textColor="text-[#579AFF]"
+      />
     </main>
   );
 };
