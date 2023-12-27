@@ -39,13 +39,14 @@ const WavyText = ({ text, delay = 0, duration = 0.01, replay, ...props }) => {
       style={{ display: "flex", overflow: "hidden" }}
       variants={container}
       initial="hidden"
+      className=" hover:ml-10 transition-all  duration-500 "
       whileInView={"visible"}
       viewport={{ once: true, amount: 1 }}
       {...props}
     >
       {letters.map((letter, index) => (
         <motion.span
-          className="font-bold text-4xl"
+          className="font-bold text-4xl "
           key={index}
           variants={child}
         >

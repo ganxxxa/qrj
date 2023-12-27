@@ -16,7 +16,9 @@ const Accordion = ({ data }) => {
       {data.map((item, i) => (
         <div className="item" key={i}>
           <div
-            className="flex flex-row-reverse items-center justify-between  py-12  px-6 sm:px-12 lg:px-28 xl:px-36 "
+            className={`flex flex-row-reverse items-center justify-between  py-12  px-6 sm:px-12 lg:px-28 xl:px-36 hover:bg-[#2e2e2e75] ${
+              selected === i && "bg-[#2e2e2e75]"
+            }`}
             onClick={() => toggle(i)}
             // onClick={() => console.log(item.description)}
           >
