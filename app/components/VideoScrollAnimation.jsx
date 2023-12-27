@@ -37,8 +37,10 @@ export default function VideoScrollAnimation() {
       scrub: 1.5,
       pin: videoRef.current,
       onUpdate: (self) => {
-        videoRef.current.currentTime =
-          videoRef.current.duration * self.progress.toFixed(100);
+        if (videoRef.current && videoRef.current.duration) {
+          videoRef.current.currentTime =
+            videoRef.current.duration * self.progress.toFixed(100);
+        }
       },
     });
 

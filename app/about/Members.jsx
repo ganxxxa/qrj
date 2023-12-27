@@ -3,7 +3,11 @@ import SplitText from "../utils/split.min.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-
+import m0 from "@/public/members/0.jpg";
+import m1 from "@/public/members/1.jpg";
+import m2 from "@/public/members/2.jpg";
+import m3 from "@/public/members/3.jpg";
+import m7 from "@/public/members/7.jpg";
 const Members = () => {
   const sectionRef = useRef(null);
   const headerRef = useRef(null);
@@ -122,12 +126,15 @@ const Members = () => {
           {imageSources.map((item, index) => (
             <div
               key={index}
-              className="max-w-[600px] min-w-[260px] sm:h-[60vh] h-[50vh] flex-shrink-0"
+              className="max-w-[600px] min-w-[280px] sm:h-[60vh] h-[50vh] flex-shrink-0"
             >
-              <Image
-                className="img-ptrn rounded-none h-full object-cover"
-                src={item.src}
-              />
+              <div className="h-full w-full relative">
+                <Image
+                  fill
+                  className="img-ptrn rounded-none object-cover"
+                  src={item.src}
+                />
+              </div>
               <h3 className="font-bold text-[#FFBF00]  text-xl lg:text-2xl  py-2">
                 {item.name}
               </h3>

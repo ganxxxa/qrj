@@ -2,6 +2,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 const SnapScroll = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -61,9 +62,12 @@ const SnapScroll = () => {
           technology to develop customized branding, marketing, and web
           solutions that exceed your expectations
         </p>
-        <a className="uppercase bg-white px-4 py-2 text-black rounded-lg">
+        <Link
+          href="/services/branding"
+          className="uppercase bg-white px-4 py-2 text-black rounded-lg"
+        >
           view service
-        </a>
+        </Link>
       </section>
       <section
         className="panel flex flex-col justify-center h-screen shd items-center gap-12 text-center bg-cover bg-center bg-[url('/mark.jpg')]"
@@ -79,9 +83,12 @@ const SnapScroll = () => {
           technology to develop customized branding, marketing, and web
           solutions that exceed your expectations{" "}
         </p>
-        <a className="uppercase bg-white px-4 py-2 text-black rounded-lg">
+        <Link
+          href="/services/marketing"
+          className="uppercase bg-white px-4 py-2 text-black rounded-lg"
+        >
           view service
-        </a>
+        </Link>
       </section>
       <section
         className="panel flex flex-col justify-center h-screen shd items-center gap-12 text-center bg-cover bg-center bg-[url('/dev.jpg')]"
@@ -99,9 +106,12 @@ const SnapScroll = () => {
           technology to develop customized branding, marketing, and web
           solutions that exceed your expectations
         </p>
-        <a className="uppercase bg-white px-4 py-2 text-black rounded-lg">
+        <Link
+          href="/services/development"
+          className="uppercase bg-white px-4 py-2 text-black rounded-lg"
+        >
           view service
-        </a>
+        </Link>
       </section>
     </div>
   );

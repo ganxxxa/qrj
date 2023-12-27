@@ -1,0 +1,28 @@
+.item {
+  border-bottom: 1px solid #eeeeee8d;
+  cursor: pointer;
+  margin-bottom: 5px;
+
+  color: #e1e1e1;
+}
+.title {
+  display: flex;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.45s ease-in-out;
+  font-weight: normal;
+  font-size: 12px;
+  background: #2e2e2e75;
+}
+.content > h2 {
+  margin: 12px 19px;
+}
+.content.show {
+  height: auto;
+  max-height: 300px;
+}

@@ -12,7 +12,7 @@ import Social from "@/app/components/project/Social";
 import pers from "@/public/omid/personality.png";
 import arch from "@/public/omid/arch.png";
 import story1 from "@/public/omid/story1.jpg";
-import story5 from "@/public/omid/story5.jpg";
+import story5 from "@/public/omid/story5.png";
 import so1 from "@/public/omid/social/1.jpg";
 import so2 from "@/public/omid/social/2.jpg";
 import st1 from "@/public/omid/stationary/1.jpg";

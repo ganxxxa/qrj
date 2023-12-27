@@ -41,7 +41,7 @@ const Header = () => {
           >
             <ul className="flex flex-col lg:flex-row gap-12 items-center lg:justify-end text-lg">
               <Link href="/">home</Link>
-              <Link href="/work">services</Link>
+              <Link href="/services">services</Link>
               <Link href="/work">blog</Link>
               <Link href="/work">work</Link>
               <Link href="/about">about us</Link>
