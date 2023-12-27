@@ -45,7 +45,7 @@ const WavyText = ({ text, delay = 0, duration = 0.01, replay, ...props }) => {
     >
       {letters.map((letter, index) => (
         <motion.span
-          className="font-bold text-4xl "
+          className="font-black text-4xl "
           key={index}
           variants={child}
         >

@@ -35,7 +35,7 @@ const Accordion = ({ data }) => {
             </span>
           </div>
           <div className={selected === i ? "content show" : "content"}>
-            <div className="text-2xl font-light h-full w-full  px-6 sm:px-12 lg:px-28 xl:px-36 py-4 ">
+            <div className="text-2xl  font-medium h-full w-full  px-6 sm:px-12 lg:px-28 xl:px-36 py-4 ">
               {Array.isArray(item.description) ? (
                 item.description.map((it, i) => (
                   <p className="py-2" key={i}>
