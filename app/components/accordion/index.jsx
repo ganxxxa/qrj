@@ -16,7 +16,7 @@ const Accordion = ({ data }) => {
       {data.map((item, i) => (
         <div className="item" key={i}>
           <div
-            className={`flex flex-row-reverse items-center justify-between  py-12  px-6 sm:px-12 lg:px-28 xl:px-36 hover:bg-[#2e2e2e75] ${
+            className={`flex flex-row-reverse items-center justify-between  py-12  px-6 sm:px-12 lg:px-28   hover:bg-[#2e2e2e75] ${
               selected === i && "bg-[#2e2e2e75]"
             }`}
             onClick={() => toggle(i)}
@@ -26,7 +26,13 @@ const Accordion = ({ data }) => {
               {selected === i ? "-" : "+"}
             </span>
             {/* <h2 className="font-bold text-4xl">{item.title}</h2> */}
-            <WavyText text={item.title} />
+            <span
+              className={`${
+                selected === i && "ml-8"
+              }  transition-all duration-300`}
+            >
+              <WavyText text={item.title} />
+            </span>
           </div>
           <div className={selected === i ? "content show" : "content"}>
             <div className="text-2xl font-light h-full w-full  px-6 sm:px-12 lg:px-28 xl:px-36 py-4 ">

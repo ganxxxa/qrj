@@ -14,7 +14,7 @@
 .content {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.45s ease-in-out;
+  transition: all 0.6s ease-in-out;
   font-weight: normal;
   font-size: 12px;
   background: #2e2e2e75;
@@ -23,6 +23,7 @@
   margin: 12px 19px;
 }
 .content.show {
+  transition: all 0.6s ease-in-out;
   height: auto;
   max-height: 300px;
 }
