@@ -38,7 +38,7 @@ const page = () => {
     <main className="flex min-w-screen  flex-col items-center bg-[#151515] ">
       <Intro
         src="/darisun/darisun.svg"
-        title="kitchen baskets Production"
+        title="Home Suppliance"
         name="darisun"
         description="is dedicated to crafting sustainable kitchenware that blends artistry with eco-consciousness. They create unique, handmade, and recyclable dishes, emphasizing craftsmanship and environmental responsibility. Using eco-friendly materials, they contribute to a greener future."
         color="text-[#E72C47]"

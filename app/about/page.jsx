@@ -25,8 +25,8 @@ const Page = () => {
       scrollTrigger: {
         trigger: text,
         start: "top top",
-        end: "+=500",
-        scrub: 2,
+        // end: "+=300",
+        scrub: true,
         pin: true,
         ease: "power4.Out",
       },
@@ -64,7 +64,6 @@ const Page = () => {
       {
         // opacity: 0,
         scaleY: 1,
-        duration: 0.1,
       },
       {
         // opacity: 1,

@@ -33,7 +33,7 @@ const page = () => {
     <main className="flex gap-0 min-w-screen  flex-col items-center bg-[#151515] ">
       <Intro
         src="/ps/ps.svg"
-        title="Manufacturing Industry"
+        title="Sanitaryware Producer"
         name="Persian Standard "
         description={`is a leading manufacturer in Iran, specializing in vanities, Jacuzzis, saunas, and more. They distinguish themselves with superior quality, diverse designs, a robust distribution network, and excellent after-sales support. Persian Standard's success is attributed to their expert team, global partnerships, European-quality technology, and strong commitments, making them the industry leader in Iran.`}
         color="text-[#D29E5D]"

@@ -52,7 +52,7 @@ const page = () => {
     <main className="flex gap-0 min-w-screen  flex-col items-center bg-[#151515] ">
       <Intro
         src="/rashak/rashak.svg"
-        title="Food Industry"
+        title="FMCG"
         name="rashak"
         description="is a factory that specializes in the production and supply of
           high-quality spices and food products. Using the finest ingredients

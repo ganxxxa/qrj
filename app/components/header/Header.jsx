@@ -39,10 +39,10 @@ const Header = () => {
             }}
             className={`menu  ${isOpen && "responsive_nav"}`}
           >
-            <ul className="flex flex-col lg:flex-row gap-12 items-center lg:justify-end text-lg">
+            <ul className="flex flex-col lg:flex-row gap-12 uppercase items-center lg:justify-end text-lg">
               <Link href="/">home</Link>
               <Link href="/services">services</Link>
-              <Link href="/work">blog</Link>
+              <Link href="/contact">contact us</Link>
               <Link href="/work">work</Link>
               <Link href="/about">about us</Link>
             </ul>

@@ -33,6 +33,7 @@ const page = () => {
     <main className="flex min-w-screen  flex-col items-center bg-[#151515] ">
       <Intro
         src="/bahar/bahar.svg"
+        title="Educational Consultancy Firm"
         name="BAHAR GROUP "
         description="is a prominent player in the educational sector, dedicated to providing essential services and knowledge to international students aspiring to pursue higher education in Turkey's prestigious colleges. They facilitate your academic journey with expert guidance, ensuring a smooth transition to top Turkish institutions."
         color="text-[#FFBA3A]"

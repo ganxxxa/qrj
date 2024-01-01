@@ -67,12 +67,12 @@ export default function VideoScrollAnimation() {
         .from(split.chars, { opacity: 0, duration: 0.01, stagger: 0.002 }, 0.03)
         .to(
           split2.chars,
-          { color: "#FFF", duration: 0.03, stagger: 0.005 },
+          { color: "#FFF", duration: 0.03, stagger: 0.0004 },
           0.1
         )
         .to(
           split2.chars,
-          { color: "#FFBF00", duration: 0.03, stagger: 0.005 },
+          { color: "#FFBF00", duration: 0.03, stagger: 0.001 },
           0.1001
         )
         .to(
@@ -103,10 +103,10 @@ export default function VideoScrollAnimation() {
         <div className="absolute w-screen h-screen top-0 left-0 flex items-center">
           <div
             ref={textRef}
-            className="flex flex-col items-center lg:items-start justify-center w-full text-6xl sm:text-8xl  uppercase font-black lg:px-36 text-white"
+            className="flex flex-col items-center lg:items-start justify-center w-full text-5xl sm:text-8xl  uppercase font-black lg:px-36 text-white"
           >
             <span>here</span>
-            <span ref={textRef2} className="age flex gap-6">
+            <span ref={textRef2} className="age  flex gap-6">
               <h1>we</h1>
               <h1>shine</h1>
             </span>

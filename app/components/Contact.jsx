@@ -28,7 +28,7 @@ const Contact = () => {
     <div>
       {" "}
       <div
-        className="h-screen w-screen px-4 flex flex-col justify-center gap-10 items-center text-center bg-gray-50 text-black "
+        className="max-h-screen w-screen px-4 flex flex-col justify-center gap-10 py-24 items-center text-center bg-gray-50 text-black "
         ref={contactRef}
       >
         <h1 className="text-[calc(24px+2vw)]">

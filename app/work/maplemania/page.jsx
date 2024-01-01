@@ -33,6 +33,7 @@ const page = () => {
       <Intro
         src="/maple/maple.svg"
         name="THE MAPLE MANIA "
+        title="FMCG"
         description="is inspired by old-fashioned America. The music, cinema, and other cultural and artistic pursuits during that time reflect the positivity, liveliness, and prosperity of era. They're your gateway to a world of maple goodness. Their passion for all things maple is deeply rooted in the rich heritage of Japan. From delectable maple treats to artisanal maple products, they bring the sweet charm of maple to your doorstep."
         color="text-[#EB8B33]"
         colorbg="bg-[#EB8B33]"

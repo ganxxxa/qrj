@@ -128,10 +128,10 @@ const Members = () => {
               key={index}
               className="max-w-[600px] min-w-[280px] sm:h-[60vh] h-[50vh] flex-shrink-0"
             >
-              <div className="h-full w-full relative">
+              <div className="h-full  w-full relative">
                 <Image
                   fill
-                  className="img-ptrn rounded-none object-cover"
+                  className="img-ptrn rounded-none grayscale object-cover"
                   src={item.src}
                 />
               </div>

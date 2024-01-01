@@ -19,7 +19,7 @@ const Card = ({ backgroundColor, title, logo, link, paragraph }) => {
           </div>
         </div>
         <div className="card-content">
-          <h3>{title}</h3>
+          <h3 className="uppercase">{title}</h3>
           <p>{paragraph}</p>
         </div>
       </div>

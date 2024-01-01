@@ -20,7 +20,7 @@ const page = () => {
               backgroundColor="#3C3C3B"
               logo="/palermo/palermo.svg"
               link="/work/palermo"
-              title="stone and ceramic products"
+              title="Stone and ceramic products"
               paragraph=""
             />{" "}
             <Card
@@ -34,28 +34,27 @@ const page = () => {
               backgroundColor="#003942"
               logo="/ps/ps.svg"
               link="/work/persianstandard"
-              title="Manufacturing Industry"
+              title="Sanitaryware Producer"
               paragraph=""
             />
             <Card
               backgroundColor="#223E83"
               logo="/mcd/mcd.svg"
               link="/work/mcd-academy"
-              title="Finance broker"
+              title="Educational Firm"
               paragraph=""
-            />{" "}
+            />
             <Card
               backgroundColor="#E12729"
               logo="/rashak/rashak.svg"
               link="/work/rashak"
-              title="Food Industry"
-              paragraph=""
+              title="FMCG"
             />
             <Card
               backgroundColor="#2695B3"
               logo="/ok/ok.svg"
               link="/work/oktamam"
-              title="Consultancy and Services"
+              title="Educational Consultancy Firm"
               paragraph=""
             />
             <Card
@@ -76,7 +75,7 @@ const page = () => {
               backgroundColor="#37185B"
               logo="/bahar/bahar.svg"
               link="/work/bahar"
-              title="educational Services"
+              title="Educational Consultancy Firm"
               paragraph=""
             />
             <Card
@@ -90,13 +89,13 @@ const page = () => {
               backgroundColor="#EB8B33"
               logo="/maple/maple.svg"
               link="/work/maplemania"
-              paragraph=""
+              title="FMCG"
             />
             <Card
               backgroundColor="#E72C47"
               logo="/darisun/darisun.svg"
               link="/work/darisun"
-              title="kitchen baskets Production"
+              title="Home Suppliance"
               paragraph=""
             />
           </div>

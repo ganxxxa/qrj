@@ -16,7 +16,7 @@ const page = () => {
     <main className="flex gap-0 min-w-screen  flex-col items-center bg-[#151515] ">
       <Intro
         src="/mcd/mcd.svg"
-        title="Food Industry"
+        title="Educational Firm"
         name="MCD ACADEMY"
         description=", based in Turkey, specializes in facilitating your journey to Turkish universities. They offer comprehensive services to international students, simplifying the application process and guiding you toward your academic dreams in Turkey. With their expertise and dedication, they ensure a seamless transition to top Turkish universities."
         color="text-[#67B8E5]"

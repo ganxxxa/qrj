@@ -33,26 +33,23 @@ const Footer = () => {
     };
   }, []);
   return (
-    <div className="w-full max-h-screen py-16 xl:px-36 md:px-12 px-2 sm:px-8 gap-12 flex flex-col">
+    <div className="w-full max-h-screen pb-10 xl:px-36 md:px-12 px-4 sm:px-8 gap-12 flex flex-col">
       <div className="flex relative md:flex-row flex-col h-full lg:gap-16 md:gap-8 gap-20 justify-between ">
-        <button className="md:absolute self-center md:top-0 md:translate-x-12  lg:translate-x-20 border border-white rounded-md h-10 w-1/2 md:w-52">
+        <button className="md:absolute self-center md:top-0 md:translate-x-12 lg:translate-x-20 border border-white rounded-md h-10 w-1/2 md:w-52">
           contact us
         </button>
         {windowWidth < 768 && (
           <div className="brand basis-1/5 flex justify-center  gap-6 items-end ">
-            <FaDribbble size={22} />
             <FaBehance size={22} />
             <FaInstagram size={22} />
-            <FaTwitter size={22} />
-            <FaFacebookF size={22} />
             <FaLinkedinIn size={22} />
           </div>
         )}
-        <div className="ftr-lnk basis-full lg:basis-5/6 md:translate-x-16 flex justify-between items-start md:mt-52">
-          <div className="relative lg:h-32  h-16 sm:h-24 lg:w-32 w-16 sm:w-24">
+        <div className="ftr-lnk basis-full lg:basis-5/6 md:translate-x-16 flex justify-between items-start">
+          <div className="relative lg:h-32 translate-x-2 sm:translate-x-5 translate-y-10 md:translate-y-16 h-16 sm:h-24 lg:w-32 w-16 sm:w-24">
             <Image src="/logo.svg" fill className="object-fit" />
           </div>
-          <ul className="flex flex-col ">
+          <ul className="flex text-justify  flex-col ">
             <h3>MAIN</h3>
             <Link href="/home">
               <li>Home</li>
@@ -72,20 +69,11 @@ const Footer = () => {
             <li>Marketing</li>
             <li>Developing</li>
           </ul>
-          <ul className="flex flex-col ">
-            <h3>SERVICES</h3>
-            <li>Branding</li>
-            <li>Marketing</li>
-            <li>Developing</li>
-          </ul>
         </div>
         {windowWidth >= 768 && (
           <div className="brand basis-1/5 flex flex-col gap-6 items-end ">
-            <FaDribbble size={22} />
             <FaBehance size={22} />
             <FaInstagram size={22} />
-            <FaTwitter size={22} />
-            <FaFacebookF size={22} />
             <FaLinkedinIn size={22} />
           </div>
         )}

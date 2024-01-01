@@ -104,9 +104,9 @@ const What = () => {
   return (
     <main
       ref={containerRef}
-      className="h-[300vh] px-8 w-screen sm:my-16  sm:py-20 sm:px-28 xl:my-[4vw]"
+      className="h-[300vh] px-8 w-screen sm:my-6  sm:py-10 md:px-28 xl:my-36"
     >
-      <div className="h-screen w-full  flex flex-col justify-evenly  gap-[3vh] lg:gap-0 2xl:translate-y-12 relative">
+      <div className="h-screen w-full  flex flex-col justify-evenly  gap-[2vh] lg:gap-0 2xl:translate-y-12 relative">
         <span ref={titleRef}>
           <h3 className="text-[#FFBF00]  2xl:text-[4.5vw] lg:text-[5.6vw] sm:text-[6.7vw] text-[8vw]  font-semibold leading-6 tracking-wide">
             WHAT
@@ -118,7 +118,7 @@ const What = () => {
         <div className="flex flex-col-reverse  lg:flex-row h-[65vh] lg:h-full lg:translate-y-6 justify-around lg:justify-between">
           <p
             ref={textRef}
-            className="2xl:text-[30px] lg:text-[1.65vw] md:text-[2.5vw] sm:text-[2.8vw] text-[calc(2.3vw+1vh)] lg:w-2/3 h-3/4 opacity-0 font-normal text-justify tracking-wide pt-4 "
+            className="2xl:text-[1.35] lg:text-[1.65vw] md:text-[2.2vw] sm:text-[2.8vw] text-[calc(2.3vw+1vh)] lg:w-2/3 h-3/4 opacity-0 font-normal text-justify tracking-normal pt-4 "
           >
             Elevate your brand with our comprehensive branding and brand
             strategy services at our advertising studio. We meticulously craft
@@ -132,7 +132,7 @@ const What = () => {
           </p>
           <div
             ref={blurRef}
-            className="text-2xl flex lg:flex-col md:gap-28 2xl:gap-40 sm:gap-20 gap-[5vw] text-[4.7vw] sm:text-[3.7vw] justify-around  lg:justify-normal  content-between translate-y-1/4 sm:-translate-y-20 2xl:-translate-y-40"
+            className="text-2xl flex lg:flex-col md:gap-28 2xl:gap-40 sm:gap-20 gap-[5vw] text-[4.7vw] sm:text-[3.7vw] justify-around  lg:justify-normal  content-between translate-y-1/4 sm:-translate-y-10 lg:-translate-y-20 2xl:-translate-y-40"
           >
             <h3 className="">Branding</h3>
             <h3 className="blur-[12px]">Marketing</h3>

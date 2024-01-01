@@ -43,7 +43,7 @@ const page = () => {
     <main className="flex min-w-screen  flex-col items-center bg-[#151515] ">
       <Intro
         src="/ok/ok.svg"
-        title="Consultancy and Services"
+        title="Educational Consultancy Firm"
         name="OKTAMAM"
         description=" is a comprehensive service provider across the Middle East and Europe. Specializing in educational services, business consultation, real estate investment, tourism, and more, they cater to your multifaceted needs. With a commitment to excellence, they offer expert guidance and solutions to individuals and businesses, ensuring success in diverse sectors."
         color="text-[#2695B3]"
