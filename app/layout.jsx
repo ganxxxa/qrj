@@ -6,12 +6,13 @@ import Header from "./components/header/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
-import { useLayoutEffect, useState, useEffect } from "react";
+import { useLayoutEffect, useState, useEffect, Suspense } from "react";
 import gsap from "gsap";
 import "./style/index.scss";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { AnimatePresence, motion } from "framer-motion";
 import Preloader from "./components/preloder";
+import Loading from "./loading";
 
 export default function RootLayout({ children }) {
   let width;
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
     width = 0;
   }
   const [windowWidth, setWindowWidth] = useState(width);
+  const [preloader, setPreload] = useState(true);
   const refreshPage = () => {
     window.location.reload(true);
   };
@@ -43,7 +45,7 @@ export default function RootLayout({ children }) {
       window.removeEventListener("resize", checkWindowWidth);
     };
   }, [windowWidth]);
-  const [preloader, setPreload] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setPreload(false);
@@ -58,7 +60,9 @@ export default function RootLayout({ children }) {
       ) : (
         <body>
           <Header />
-          <main>{children}</main>
+          <Suspense fallback={<Loading />}>
+            <main>{children}</main>
+          </Suspense>
           <Footer />
         </body>
       )}
