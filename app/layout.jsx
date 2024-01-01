@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     width = 0;
   }
   const [windowWidth, setWindowWidth] = useState(width);
-  const [preloader, setPreload] = useState(true);
+
   const refreshPage = () => {
     window.location.reload(true);
   };
@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
       window.removeEventListener("resize", checkWindowWidth);
     };
   }, [windowWidth]);
-
+  const [preloader, setPreload] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setPreload(false);
@@ -53,19 +53,16 @@ export default function RootLayout({ children }) {
   }, []);
   return (
     <html>
-      {preloader ? (
-        <body>
-          <Preloader />
-        </body>
-      ) : (
-        <body>
-          <Header />
-          <Suspense fallback={<Loading />}>
-            <main>{children}</main>
-          </Suspense>
-          <Footer />
-        </body>
-      )}
+      <body></body>
+
+      <body>
+        {/* {preloader && <Preloader />} */}
+        <Header />
+        <Suspense fallback={<Loading />}>
+          <main>{children}</main>
+        </Suspense>
+        <Footer />
+      </body>
     </html>
   );
 }
