@@ -3,13 +3,20 @@ import React, { useLayoutEffect, useState, useRef } from "react";
 import Link from "next/link";
 import "./style.scss";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const Header = () => {
   const [windowWidth, setWindowWidth] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef();
   const burgerRef = useRef();
-
+  const headerAnime = {
+    offscreen: { y: -50, opacity: 0 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.35, delay: 0.5 },
+    },
+  };
   useLayoutEffect(() => {
     // Function to update the window width
     const handleResize = () => {
@@ -28,7 +35,13 @@ const Header = () => {
     };
   }, []);
   return (
-    <nav className="z-40 flex flex-col justify-between py-12 px-4 md:px-28 items-center bg-opacity-50 bg-black absolute top-0 left-0 w-full ">
+    <motion.nav
+      variants={headerAnime}
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true }}
+      className="z-40 flex flex-col justify-between py-12 px-4 md:px-28 items-center bg-opacity-50 bg-black absolute top-0 left-0 w-full "
+    >
       <div className="flex justify-between items-center w-full ">
         <Image width={78} height={72} src="/logo.svg" className="z-50" />
         <div className="flex justify-between gap-32">
@@ -65,7 +78,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
