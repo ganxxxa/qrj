@@ -71,19 +71,21 @@ const Preloader = () => {
   }, []);
 
   return (
-    <div className="preloader">
-      <div ref={innerRef} className="preloader__inner">
-        {/* <div ref={percentRef} className="percent">
+    <section className="fixed h-screen w-screen overflow-hidden z-50">
+      <div className="preloader">
+        <div ref={innerRef} className="preloader__inner">
+          {/* <div ref={percentRef} className="percent">
           1%
-        </div>
-        <div ref={barRef} className="bar">
+          </div>
+          <div ref={barRef} className="bar">
           <div ref={ref} className="bar__confirm"></div>
         </div> */}
+        </div>
+        <div ref={headingRef} className="heading font-bold">
+          <h1 ref={textRef}>GARAGE Studio</h1>
+        </div>
       </div>
-      <div ref={headingRef} className="heading font-bold">
-        <h1 ref={textRef}>GARAGE Studio</h1>
-      </div>
-    </div>
+    </section>
   );
 };
 

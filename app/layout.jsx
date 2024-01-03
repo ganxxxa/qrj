@@ -4,11 +4,62 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import "./globals.css";
 import { useLayoutEffect, useState, useEffect, Suspense } from "react";
-import gsap from "gsap";
+import localFont from "next/font/local";
 import "./style/index.scss";
 import Preloader from "./components/preloder";
 import Loading from "./loading";
 import { motion } from "framer-motion";
+
+const customFont = localFont({
+  src: [
+    {
+      path: "./fonts/Gilroy-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Gilroy-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Gilroy-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Gilroy-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Gilroy-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Gilroy-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Gilroy-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Gilroy-UltraLight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Gilroy-Thin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+  ],
+  variable: "--custom",
+});
 
 export default function RootLayout({ children }) {
   let width;
@@ -67,22 +118,25 @@ export default function RootLayout({ children }) {
       setPreloader(false);
     }, 2000);
   }, []);
+
   return (
-    <html>
+    <html lang="en" className={`${customFont.variable} font-sans`}>
       <body>
-        {preloader && <Preloader />}
-        <Header />
-        <Suspense fallback={<Loading />}>
-          <motion.main
-            variants={headerAnime}
-            initial={"offscreen"}
-            whileInView={"onscreen"}
-            viewport={{ once: true }}
-          >
-            {children}
-          </motion.main>
-        </Suspense>
-        <Footer />
+        <main>
+          {preloader && <Preloader />}
+          <Header />
+          <Suspense fallback={<Loading />}>
+            <motion.main
+              variants={headerAnime}
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              viewport={{ once: true }}
+            >
+              {children}
+            </motion.main>
+          </Suspense>
+          <Footer />
+        </main>
       </body>
     </html>
   );

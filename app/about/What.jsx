@@ -106,7 +106,7 @@ const What = () => {
       ref={containerRef}
       className="h-[300vh] px-8 w-screen sm:my-6  sm:py-10 md:px-28 xl:my-36"
     >
-      <div className="h-screen w-full  flex flex-col justify-evenly  gap-[2vh] lg:gap-0 2xl:translate-y-12 relative">
+      <div className="h-screen w-full  flex flex-col justify-evenly  gap-[2vh] lg:gap-0  lg:translate-y-12 relative">
         <span ref={titleRef}>
           <h3 className="text-[#FFBF00]  2xl:text-[4.5vw] lg:text-[5.6vw] sm:text-[6.7vw] text-[8vw]  font-semibold leading-6 tracking-wide">
             WHAT

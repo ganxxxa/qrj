@@ -1,6 +1,16 @@
+"use client";
 import { motion } from "framer-motion";
 
 const WavyText = ({ text, delay = 0, duration = 0.01, replay, ...props }) => {
+  let width;
+
+  if (typeof window !== "undefined") {
+    width = window.innerWidth;
+  } else {
+    // Handle the case when window is undefined
+    width = 0;
+  }
+
   const letters = Array.from(text);
 
   const container = {
@@ -37,7 +47,7 @@ const WavyText = ({ text, delay = 0, duration = 0.01, replay, ...props }) => {
   return (
     <motion.h1
       style={{ display: "flex", overflow: "hidden" }}
-      variants={container}
+      variants={width > 800 && container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 1 }}
@@ -47,7 +57,7 @@ const WavyText = ({ text, delay = 0, duration = 0.01, replay, ...props }) => {
         <motion.span
           className="font-black text-4xl "
           key={index}
-          variants={child}
+          variants={width > 800 && child}
         >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
