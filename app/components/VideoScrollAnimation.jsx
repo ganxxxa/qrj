@@ -11,7 +11,7 @@ export default function VideoScrollAnimation() {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
   const textRef2 = useRef(null);
-
+  const Ref = useRef(null);
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     videoRef.current.pause();
@@ -33,9 +33,9 @@ export default function VideoScrollAnimation() {
     ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top top",
-      end: "bottom bottom",
-      scrub: 1.5,
-      pin: videoRef.current,
+      end: "center center",
+      scrub: 1.2,
+      // pin: videoRef.current,
       onUpdate: (self) => {
         if (videoRef.current && videoRef.current.duration) {
           videoRef.current.currentTime =
@@ -61,23 +61,37 @@ export default function VideoScrollAnimation() {
       scrub: 2,
     });
 
+    ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top top",
+      end: "bottom bottom",
+      pin: Ref.current,
+      scrub: 2,
+    });
     setTimeout(() => {
       timeline
 
         .from(split.chars, { opacity: 0, duration: 0.01, stagger: 0.002 }, 0.03)
+        .to(Ref.current, { opacity: 0, duration: 0.05 }, 0.065)
         .to(
-          split2.chars,
-          { color: "#FFF", duration: 0.03, stagger: 0.0004 },
-          0.1
+          sectionRef.current,
+          { backgroundColor: "#e1e1e1", duration: 0.05 },
+          0.095
         )
         .to(
           split2.chars,
-          { color: "#FFBF00", duration: 0.03, stagger: 0.001 },
+          { color: "#FFF", duration: 0.03, stagger: 0.004 },
+          0.1
+        )
+
+        .to(
+          split2.chars,
+          { color: "#FFBF00", duration: 0.03, stagger: 0.004 },
           0.1001
         )
         .to(
           oddChildren,
-          { color: "#000", duration: 0.03, stagger: 0.0001 },
+          { color: "#000", duration: 0.03, stagger: 0.001 },
           0.11
         );
 
@@ -86,18 +100,20 @@ export default function VideoScrollAnimation() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="h-[1000vh] relative m-0 p-0 w-screen">
+    <div ref={sectionRef} className="h-[600vh] relative m-0 p-0 w-screen">
       <div>
-        <video
-          ref={videoRef}
-          className="h-screen w-full object-cover top-0 left-0"
-          preload="auto"
-          muted
-          playsInline
-        >
-          <source src="bg1.mp4" type="video/mp4" />
-          Your browser does not support HTML video.
-        </video>
+        <span ref={Ref} className="h-screen w-screen">
+          <video
+            ref={videoRef}
+            className="h-screen w-full object-cover top-0 left-0"
+            preload="auto"
+            muted
+            playsInline
+          >
+            <source src="bg2.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+        </span>
 
         {/* <div ref={scrollSectionRef} className="block"></div> */}
         <div className="absolute w-screen h-screen top-0 left-0 flex items-center">

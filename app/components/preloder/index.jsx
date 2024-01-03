@@ -23,9 +23,13 @@ const Preloader = () => {
       //   opacity: 0,
       //   zIndex: -1,
       // })
-      .set(innerRef.current, {
-        translateY: "-100%",
-      })
+      .set(
+        innerRef.current,
+        {
+          translateY: "-100%",
+        },
+        "-=0.5"
+      )
       .set(
         textRef.current,
         {

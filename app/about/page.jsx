@@ -67,8 +67,9 @@ const Page = () => {
       },
       {
         // opacity: 1,
-        scaleY: 0.7,
+        scaleY: 0.8,
         opacity: 0,
+        translateY: 400,
       }
     );
     // .to(
