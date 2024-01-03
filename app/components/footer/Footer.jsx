@@ -51,11 +51,11 @@ const Footer = () => {
           </div>
           <ul className="flex text-justify  flex-col ">
             <h3>MAIN</h3>
-            <Link href="/home">
+            <Link href="/">
               <li>Home</li>
             </Link>
-            <li>Services</li>
-            <li>Blog</li>
+            <Link href="/services">Services</Link>
+            <Link href="contact">Contact Us</Link>
             <Link href="/work">
               <li>Work</li>
             </Link>
@@ -65,7 +65,7 @@ const Footer = () => {
           </ul>
           <ul className="flex flex-col ">
             <h3>SERVICES</h3>
-            <li>Branding</li>
+            <Link href="/services/branding">Branding</Link>
             <li>Marketing</li>
             <li>Developing</li>
           </ul>

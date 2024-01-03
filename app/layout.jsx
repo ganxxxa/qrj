@@ -71,6 +71,7 @@ export default function RootLayout({ children }) {
     width = 0;
   }
   const [windowWidth, setWindowWidth] = useState(width);
+  const [yy, setY] = useState(0);
 
   const refreshPage = () => {
     window.location.reload(true);
@@ -91,9 +92,15 @@ export default function RootLayout({ children }) {
       transition: { duration: 0.35, delay: 2 },
     },
   };
+  console.log(yy);
   useEffect(() => {
-    window.addEventListener("resize", checkWindowWidth);
+    window.addEventListener("scroll", () => {
+      const posY = window.scrollY;
+      setY(posY);
+    });
 
+    window.addEventListener("resize", checkWindowWidth);
+    history.scrollRestoration = "manual";
     return () => {
       window.removeEventListener("resize", checkWindowWidth);
     };
@@ -124,7 +131,7 @@ export default function RootLayout({ children }) {
       <body>
         <main>
           {preloader && <Preloader />}
-          <Header />
+          <Header yy={yy} />
           <Suspense fallback={<Loading />}>
             <motion.main
               variants={headerAnime}
