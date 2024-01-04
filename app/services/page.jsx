@@ -9,7 +9,7 @@ const page = () => {
     <main>
       <section>
         <div className="w-screen flex flex-col justify-center items-center px-4 sm:px-10 lg:px-32 xl:px-40 h-screen gap-16">
-          <h1 className="font-bold pt-12 uppercase text-6xl sm:text-8xl">
+          <h1 className="font-bold pt-12 text-center lg:text-left uppercase text-6xl sm:text-8xl">
             our services
           </h1>
           <p className="text-xl font-light text-justify">

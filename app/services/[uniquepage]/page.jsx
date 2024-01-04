@@ -17,10 +17,10 @@ export default function UniquePage({ params: { uniquepage } }) {
   return (
     <main>
       <div className="w-screen flex flex-col justify-center items-center px-4 sm:px-10 lg:px-32 xl:px-40 h-screen gap-16">
-        <h1 className="font-black uppercase pt-12 text-6xl sm:text-8xl">
+        <h1 className="font-black uppercase pt-12 text-5xl sm:text-6xl lg:text-8xl">
           {service.name}
         </h1>
-        <p className="text-2xl font-medium text-justify">
+        <p className="sm:text-2xl text-xl font-medium text-justify">
           We turn ideas into reality with creative solutions that help you stand
           out. Our team brings together innovative thinking and cutting-edge
           technology to develop customized branding, Marketing and web solutions

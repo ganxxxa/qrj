@@ -46,7 +46,12 @@ const WavyText = ({ text, delay = 0, duration = 0.01, replay, ...props }) => {
 
   return (
     <motion.h1
-      style={{ display: "flex", overflow: "hidden" }}
+      style={{
+        display: "flex",
+        overflow: "hidden",
+        maxWidth: "80vw",
+      }}
+      className="h-auto "
       variants={width > 800 && container}
       initial="hidden"
       whileInView="visible"
@@ -55,7 +60,7 @@ const WavyText = ({ text, delay = 0, duration = 0.01, replay, ...props }) => {
     >
       {letters.map((letter, index) => (
         <motion.span
-          className="font-black text-4xl "
+          className="font-black text-lg sm:text-2xl lg:text-4xl  whitespace-pre-wrap  "
           key={index}
           variants={width > 800 && child}
         >

@@ -58,7 +58,7 @@ export const services = [
           "Develop a roadmap outlining your studio's positioning, messaging, and tactical approach to achieve its goals.",
       },
       {
-        title: "Design Your Brand Identity (Offline and Digital Design)",
+        title: "Design Your Brand Identity",
         description:
           "Craft visually captivating offline and digital brand elements, such as logos and visuals, reflecting your studio's essence.",
       },
@@ -78,7 +78,7 @@ export const services = [
           "Cultivate valuable relationships with industry peers and partners, fostering collaborative opportunities for growth.",
       },
       {
-        title: "B2B and B2C Brand Communications’ Strategies",
+        title: "Brand Communications’ Strategies",
         description:
           "Tailor distinct communication approaches for business-to-business and business-to-consumer interactions, aligning with diverse audience needs.",
       },
@@ -118,7 +118,7 @@ export const services = [
     name: "marketing",
     data: [
       {
-        title: "Client Discovery and Needs Assessment",
+        title: "Discovery and Needs Assessment",
         description: [
           "Begin by understanding the client's business, industry, and objectives.",
           "Conduct a thorough needs assessment to identify specific marketing goals and challenges.",
@@ -132,7 +132,7 @@ export const services = [
         ],
       },
       {
-        title: "Strategy Development (B2B + B2C+ Ads)",
+        title: "Strategy Development",
         description: [
           "Create a comprehensive marketing strategy that aligns with the client's goals.",
           "Determine the most suitable digital channels and tactics (e.g., SEO, social media, PPC) for achieving objectives.",
@@ -153,7 +153,7 @@ export const services = [
         ],
       },
       {
-        title: "Website Optimization (if applicable)",
+        title: "Website Optimization",
         description: [
           "Enhance the client's website for improved user experience and search engine visibility.",
           "Implement SEO strategies to increase organic traffic.",
@@ -196,7 +196,7 @@ export const services = [
         ],
       },
       {
-        title: "Client Collaboration and Feedback",
+        title: "Collaboration and Feedback",
         description: [
           "Maintain open communication with the client throughout the project.",
           "Gather client feedback and make adjustments to campaigns based on their input.",
@@ -237,7 +237,7 @@ export const services = [
         ],
       },
       {
-        title: "Performance Review and Goal Setting",
+        title: "Performance Review",
         description: [
           "Periodically review campaign performance against initial goals.",
           "Collaborate with the client to set new objectives and strategies for continued growth.",
@@ -251,7 +251,7 @@ export const services = [
         ],
       },
       {
-        title: "Documentation and Knowledge Sharing",
+        title: "Documentation",
         description: [
           "Maintain thorough documentation of campaign strategies, processes, and outcomes.",
           "Share knowledge and best practices within the studio to foster continuous improvement.",
@@ -278,7 +278,7 @@ export const services = [
         ],
       },
       {
-        title: "User Research and Persona Development (for applications)",
+        title: "User Research",
         description: [
           "Conduct user interviews and surveys to understand user needs.",
           "Create user personas to guide design and development decisions.",
@@ -307,7 +307,7 @@ export const services = [
         ],
       },
       {
-        title: "Development (Coding)",
+        title: "Development",
         description: [
           "Develop the website or application based on the approved wireframes and user stories.",
           "Follow coding best practices and coding standards.",
@@ -323,14 +323,14 @@ export const services = [
         ],
       },
       {
-        title: "Continuous Integration and Deployment",
+        title: "CI and CD",
         description: [
           "Implement continuous integration (CI) and continuous deployment (CD) pipelines for automated testing and deployment.",
           "Deploy the application to staging and production environments.",
         ],
       },
       {
-        title: "Client Feedback and Iteration",
+        title: "Feedback and Iteration",
         description: [
           "Share the working product with the client for feedback.",
           "Address client feedback and make necessary iterations.",
@@ -338,21 +338,21 @@ export const services = [
         ],
       },
       {
-        title: "Content Creation (for websites)",
+        title: "Content Creation",
         description: [
           "Develop and optimize content for the website, including text, images, and multimedia elements.",
           "Ensure content aligns with the client's branding and messaging.",
         ],
       },
       {
-        title: "Search Engine Optimization (SEO)",
+        title: "SEO",
         description: [
           "Optimize the website's structure and content for search engines.",
           "Implement on-page SEO best practices.",
         ],
       },
       {
-        title: "Security and Performance Optimization",
+        title: "Security and Performance",
         description: [
           "Implement security measures to protect against common web vulnerabilities.",
           "Optimize website/application performance for fast loading times.",
@@ -373,7 +373,7 @@ export const services = [
         ],
       },
       {
-        title: "Analytics and Performance Monitoring",
+        title: "Analytics",
         description: [
           "Implement analytics tools to track user behavior and website/application performance.",
           "Use data to make data-driven improvements.",

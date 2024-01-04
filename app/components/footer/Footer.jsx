@@ -54,8 +54,12 @@ const Footer = () => {
             <Link href="/">
               <li>Home</li>
             </Link>
-            <Link href="/services">Services</Link>
-            <Link href="contact">Contact Us</Link>
+            <Link href="/services">
+              <li>Services</li>
+            </Link>
+            <Link href="contact">
+              <li>Contact Us</li>
+            </Link>
             <Link href="/work">
               <li>Work</li>
             </Link>
@@ -65,9 +69,15 @@ const Footer = () => {
           </ul>
           <ul className="flex flex-col ">
             <h3>SERVICES</h3>
-            <Link href="/services/branding">Branding</Link>
-            <li>Marketing</li>
-            <li>Developing</li>
+            <Link href="/services/branding">
+              <li>Branding</li>
+            </Link>
+            <Link href="/services/marketing">
+              <li>Marketing</li>
+            </Link>
+            <Link href="/services/developing">
+              <li>Developing</li>
+            </Link>
           </ul>
         </div>
         {windowWidth >= 768 && (
