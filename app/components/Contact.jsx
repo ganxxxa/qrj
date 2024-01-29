@@ -2,6 +2,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 const Contact = () => {
   const contactRef = useRef(null);
@@ -39,12 +40,18 @@ const Contact = () => {
           before.
         </h3>
         <div className="flex gap-10 ">
-          <a className="bg-black hover:bg-gray-900 cursor-pointer text-white font-bold text-sm sm:text-base  py-3 px-8  rounded-xl">
+          <Link
+            href="/contact"
+            className="bg-black hover:bg-gray-900 cursor-pointer text-white font-bold text-sm sm:text-base  py-3 px-8  rounded-xl"
+          >
             CONTACT US
-          </a>
-          <a className="bg-black hover:bg-gray-900 cursor-pointer text-white font-bold  text-sm sm:text-base py-3 px-8 rounded-xl ">
+          </Link>
+          <Link
+            href="work"
+            className="bg-black hover:bg-gray-900 cursor-pointer text-white font-bold  text-sm sm:text-base py-3 px-8 rounded-xl "
+          >
             VIEW WORKS
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -82,9 +82,12 @@ const Footer = () => {
         </div>
         {windowWidth >= 768 && (
           <div className="brand basis-1/5 flex flex-col gap-6 items-end ">
-            <FaBehance size={22} />
-            <FaInstagram size={22} />
-            <FaLinkedinIn size={22} />
+            <a href="https://www.instagram.com/thegarageadvertising?igsh=OGQ5ZDc 2ODk2ZA==">
+              <FaInstagram size={22} />
+            </a>
+            <a href="https://www.linkedin.com/company/thegarageadvertisingstudio">
+              <FaLinkedinIn size={22} />
+            </a>
           </div>
         )}
       </div>

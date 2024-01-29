@@ -100,15 +100,18 @@ const Packaging = ({
               <AnimatePresence initial={false} mode="wait">
                 {fullscreenImage === src && (
                   <motion.div className="z-40 fixed inset-0 flex items-center justify-center bg-black bg-opacity-80">
-                    <motion.img
-                      src={src}
-                      alt={`Fullscreen Image`}
-                      className="max-h-screen rounded-lg  max-w-screen mx-auto"
+                    <motion.div
                       initial={{ opacity: 0, y: -100 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -100 }}
-                      transition={{ duration: 0.2, ease: "easeInOut" }}
-                    />
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <Image
+                        src={src}
+                        alt={`Fullscreen Image`}
+                        className="max-h-screen rounded-lg  max-w-screen mx-auto"
+                      />
+                    </motion.div>
                     <button
                       className="absolute  bottom-8 text-white px-8 py-8 rounded"
                       onClick={() => toggleFullscreen(src, index)}
