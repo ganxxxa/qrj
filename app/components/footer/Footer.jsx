@@ -36,7 +36,7 @@ const Footer = () => {
     <div className="w-full max-h-screen py-10 xl:px-36 md:px-12 px-4 sm:px-8 gap-12 flex flex-col">
       <div className="flex relative md:flex-row flex-col h-full lg:gap-16 md:gap-8 gap-20 justify-between ">
         <button className="md:absolute self-center md:top-0 md:translate-x-12 lg:translate-x-20 border border-white rounded-md h-10 w-1/2 md:w-52">
-          contact us
+          <Link href="contact"> contact us</Link>
         </button>
         {windowWidth < 768 && (
           <div className="brand basis-1/5 flex justify-center  gap-6 items-end ">

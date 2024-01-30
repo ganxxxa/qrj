@@ -3,11 +3,7 @@ import SplitText from "../utils/split.min.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-import m0 from "@/public/members/0.jpg";
-import m1 from "@/public/members/1.jpg";
-import m2 from "@/public/members/2.jpg";
-import m3 from "@/public/members/3.jpg";
-import m7 from "@/public/members/7.jpg";
+
 const Members = () => {
   const sectionRef = useRef(null);
   const headerRef = useRef(null);
@@ -23,12 +19,12 @@ const Members = () => {
     { src: "/members/2.jpg", name: "Melika Abyazi", job: "CO-Founder" },
     { src: "/members/3.jpg", name: "Ali Shetabi", job: "Art Director" },
     {
-      src: "/members/0.jpg",
+      src: "/members/4.jpg",
       name: "Ehsan Forouzan Kia",
       job: "Graphic Designer",
     },
     {
-      src: "/members/0.jpg",
+      src: "/members/5.jpg",
       name: "Mahdi Ahmadi",
       job: "Graphic / Motion Designer",
     },
@@ -39,7 +35,7 @@ const Members = () => {
       job: "Full-Stack Developer",
     },
     {
-      src: "/members/0.jpg",
+      src: "/members/6.jpg",
       name: "Amirreza Safarali Zadeh",
       job: "Front-End Developer",
     },

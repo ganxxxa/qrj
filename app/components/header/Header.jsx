@@ -45,18 +45,19 @@ const Header = ({ yy }) => {
   }, [yy]);
 
   return (
-    <motion.div
-      animate={{
-        opacity: yy < 100 ? 1 : shouldShowActions ? 1 : 0,
-      }}
-      transition={{ opacity: { duration: 0.4 } }}
+    <motion.nav
+      variants={headerAnime}
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true }}
+      className="z-40  fixed top-0 left-0 w-full "
     >
-      <motion.nav
-        variants={headerAnime}
-        initial={"offscreen"}
-        whileInView={"onscreen"}
-        viewport={{ once: true }}
-        className="z-40 flex flex-col justify-between py-12 px-4 md:px-28 items-center bg-opacity-70  bg-black fixed top-0 left-0 w-full "
+      <motion.div
+        animate={{
+          opacity: yy < 100 ? 1 : shouldShowActions ? 1 : 0,
+        }}
+        transition={{ opacity: { duration: 0.4 } }}
+        className="bg-opacity-70 flex flex-col justify-between py-8 px-4 md:px-28 items-center   bg-black w-full h-full"
       >
         <div className="flex justify-between items-center w-full ">
           <Image width={78} height={72} src="/logo.svg" className="z-50" />
@@ -94,8 +95,8 @@ const Header = ({ yy }) => {
             </div>
           </div>
         </div>
-      </motion.nav>
-    </motion.div>
+      </motion.div>
+    </motion.nav>
   );
 };
 
