@@ -23,8 +23,7 @@ const Proto = ({ imageSources, title, bg }) => {
             sectionRef.current.firstChild.clientWidth *
               sectionRef.current.childElementCount -
             sectionRef.current.clientWidth;
-          console.log(sectionWidth);
-          // console.log(sectionRef);
+
           return `-${sectionWidth}px`;
         },
         ease: "none",
@@ -56,6 +55,7 @@ const Proto = ({ imageSources, title, bg }) => {
                 className="rounded-none h-full  object-cover"
                 src={src}
                 key={index}
+                alt=""
               />
             </div>
           ))}

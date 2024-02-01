@@ -91,6 +91,7 @@ const Packaging = ({
               />
 
               <Image
+                alt=""
                 width={64}
                 height={64}
                 className="absolute left-0 bottom-0 sm:left-4 sm:bottom-4 cursor-pointer sm:px-2 sm:py-1 scale-50 sm:scale-75 rounded"

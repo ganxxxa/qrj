@@ -94,8 +94,6 @@ export default function VideoScrollAnimation() {
           { color: "#000", duration: 0.03, stagger: 0.001 },
           0.11
         );
-
-      console.log(stroke);
     });
   }, []);
 

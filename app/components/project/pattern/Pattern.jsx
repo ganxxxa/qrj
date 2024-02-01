@@ -25,7 +25,6 @@ const Pattern = ({ imageSources, title, title1, absolute }) => {
               sectionRef.current.childElementCount -
             sectionRef.current.clientWidth;
 
-          // console.log(sectionRef);
           return `-${sectionWidth}px`;
         },
         ease: "none",
@@ -63,6 +62,7 @@ const Pattern = ({ imageSources, title, title1, absolute }) => {
               <Image
                 className={`rounded-none h-full w-full object-contain `}
                 src={src}
+                alt=""
               />
             </div>
           ))}

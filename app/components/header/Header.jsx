@@ -60,7 +60,13 @@ const Header = ({ yy }) => {
         className="bg-opacity-70 flex flex-col justify-between py-8 px-4 md:px-28 items-center   bg-black w-full h-full"
       >
         <div className="flex justify-between items-center w-full ">
-          <Image width={78} height={72} src="/logo.svg" className="z-50" />
+          <Image
+            width={78}
+            height={72}
+            src="/logo.svg"
+            className="z-50"
+            alt=""
+          />
           <div className="flex justify-between gap-32">
             <div
               ref={navRef}

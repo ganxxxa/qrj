@@ -9,7 +9,7 @@ const Pallete = ({ src, titleColor }) => {
           Color <span className={`${titleColor}`}> Pallete</span>
         </h1>
         <div className="relative h-full w-screen">
-          <Image src={src} />
+          <Image alt="" src={src} />
         </div>
       </div>
     </>

@@ -39,6 +39,7 @@ const Hero = () => {
               height={160}
               className="rotatee"
               src="/home.svg"
+              alt=""
             />
           </span>
         </motion.div>

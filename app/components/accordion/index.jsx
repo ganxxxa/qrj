@@ -20,7 +20,6 @@ const Accordion = ({ data }) => {
               selected === i && "bg-[#2e2e2e75]"
             }`}
             onClick={() => toggle(i)}
-            // onClick={() => console.log(item.description)}
           >
             <span className="flex items-center text-4xl">
               {selected === i ? "-" : "+"}

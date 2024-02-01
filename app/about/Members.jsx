@@ -129,6 +129,7 @@ const Members = () => {
                   fill
                   className="img-ptrn rounded-none grayscale object-cover"
                   src={item.src}
+                  alt={item.name}
                 />
               </div>
               <h3 className="font-bold text-[#FFBF00]  text-xl lg:text-2xl  py-2">

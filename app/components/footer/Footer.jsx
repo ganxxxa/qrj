@@ -47,7 +47,7 @@ const Footer = () => {
         )}
         <div className="ftr-lnk basis-full lg:basis-5/6 md:translate-x-16 flex justify-between items-start">
           <div className="relative lg:h-32 translate-x-2 sm:translate-x-5 translate-y-10 md:translate-y-16 h-16 sm:h-24 lg:w-32 w-16 sm:w-24">
-            <Image src="/logo.svg" fill className="object-fit" />
+            <Image alt="" src="/logo.svg" fill className="object-fit" />
           </div>
           <ul className="flex text-justify  flex-col ">
             <h3>MAIN</h3>

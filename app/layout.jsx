@@ -92,7 +92,7 @@ export default function RootLayout({ children }) {
       transition: { duration: 0.35, delay: 2 },
     },
   };
-  console.log(yy);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       const posY = window.scrollY;
