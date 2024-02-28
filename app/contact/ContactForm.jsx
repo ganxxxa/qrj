@@ -27,16 +27,21 @@ const ContactForm = () => {
     const templateID = "template_rqj3raj";
     const userID = "3lIub6MNQ00WjXonm";
 
-    emailjs
-      .send(serviceID, templateID, templateParams, userID)
-      .then((response) => {
-        console.log("Email sent!", response);
-        // Reset form after successful submission
-        setFormData({ name: "", phone: "", message: "" });
-      })
-      .catch((error) => {
-        console.error("Email error:", error);
-      });
+emailjs
+  .send(serviceID, templateID, templateParams, userID)
+  .then((response) => {
+    console.log("Email sent!", response);
+    // Reset form after successful submission
+    setFormData({ name: "", email: "", message: "" });
+    // Add an alert for success
+    alert("Email sent successfully!");
+  })
+  .catch((error) => {
+    console.error("Email error:", error);
+    // Add an alert for error
+    alert("Failed to send email. Please try again later.");
+  });
+
   };
 
   return (
