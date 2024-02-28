@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    phone: "",
     message: "",
   });
 
@@ -19,21 +19,20 @@ const ContactForm = () => {
     // Your EmailJS template parameters
     const templateParams = {
       from_name: formData.name,
-      from_email: formData.email,
+      from_phone: formData.phone,
       message: formData.message,
     };
 
-    // Replace these with your EmailJS configuration
-    const serviceID = "service_gl23mmu";
-    const templateID = "template_cxbck4g";
-    const userID = "Xw0nIwRGatlAcyvFp";
+    const serviceID = "service_4hcqo7e";
+    const templateID = "template_5mrx0po";
+    const userID = "3lIub6MNQ00WjXonm";
 
     emailjs
       .send(serviceID, templateID, templateParams, userID)
       .then((response) => {
         console.log("Email sent!", response);
         // Reset form after successful submission
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", phone: "", message: "" });
       })
       .catch((error) => {
         console.error("Email error:", error);
@@ -65,16 +64,16 @@ const ContactForm = () => {
         <div className="mb-4">
           <label
             className="block text-gray-100 text-sm font-bold mb-2"
-            htmlFor="email"
+            htmlFor="phone"
           >
-            Email
+            Phone number
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="email"
-            placeholder="Your email"
-            name="email"
-            value={formData.email}
+            type="phone"
+            placeholder="Your phone number"
+            name="phone"
+            value={formData.phone}
             onChange={handleChange}
           />
         </div>
