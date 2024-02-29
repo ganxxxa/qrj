@@ -32,7 +32,7 @@ emailjs
   .then((response) => {
     console.log("Email sent!", response);
     // Reset form after successful submission
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", phone: "", message: "" });
     // Add an alert for success
     alert("Email sent successfully!");
   })
